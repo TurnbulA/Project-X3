@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "avnir";
+  src: url(/Resources/avnir_sv/font/AvenirLTStd-Book) format("avnir-book");
+  src: url(/Resources/avnir_sv/font/AvenirLTStd-Medium.otf)
+    format("avnir-medium");
+  src: url(/Resources/avnir_sv/font/AvenirLTStd-Roman.otf) format("avnir-roman");
+}
 html {
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "avnir", sans-serif;
 }
 body {
   background-color: #252a41;
@@ -9,10 +16,10 @@ body {
 * {
   box-sizing: border-box;
 }
-.u-text--h {
+.u-text--header {
   color: #fbfcfc;
 }
-.u-text--p {
+.u-text--para {
   color: #989aad;
 }
 
@@ -33,7 +40,6 @@ body {
   width: fit-content;
   margin: 0 auto;
 }
-
 .c-search-bar {
   display: flex;
   align-items: center;
@@ -53,7 +59,7 @@ body {
   color: #bec4dc;
   outline: none;
 }
-form {
+.c-form {
   display: flex;
   align-items: center;
   height: 100%;
