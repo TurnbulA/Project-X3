@@ -1,13 +1,14 @@
 @font-face {
-  font-family: "avnir";
-  src: url(/Resources/avnir_sv/font/AvenirLTStd-Book) format("avnir-book");
-  src: url(/Resources/avnir_sv/font/AvenirLTStd-Medium.otf)
-    format("avnir-medium");
-  src: url(/Resources/avnir_sv/font/AvenirLTStd-Roman.otf) format("avnir-roman");
+  font-family: "avenir";
+  src: url(/Resources/avenir_sv/font/AvenirLTStd-Book) format("avenir-book");
+  src: url(/Resources/avenir_sv/font/AvenirLTStd-Medium.otf)
+    format("avenir-medium");
+  src: url(/Resources/avenir_sv/font/AvenirLTStd-Roman.otf)
+    format("avenir-roman");
 }
 html {
   font-size: 10px;
-  font-family: "avnir", sans-serif;
+  font-family: "avenir", sans-serif;
 }
 body {
   background-color: #252a41;
