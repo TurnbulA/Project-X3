@@ -18,6 +18,11 @@ Card-Text= #93959B
   src: url(/Resources/avenir_sv/font/AvenirLTStd-Roman.otf)
     format("avenir-roman");
 }
+
+.c-svg__check {
+  fill: #fff;
+}
+
 html {
   font-size: 10px;
   font-family: "avenir", sans-serif;
@@ -100,7 +105,7 @@ body {
 }
 .search-icon {
   height: 2.5rem;
-  width: 5%;
+  width: 2rem;
 }
 .c-search-bar__input::placeholder {
   font-family: "avenir", sans-serif;
