@@ -51,25 +51,31 @@ body {
 }
 .c-burger-menu__inner {
   position: absolute;
-  padding-top: 2rem;
   top: 0;
   right: 0;
   bottom: 0;
   height: auto;
-  width: 10vw;
+  width: auto;
   flex-direction: column;
-  background-color: #3b3f54;
+  background-color: #1d3b53;
   align-items: flex-start;
-  transform: translateX(-1000%);
+  border-left: 0.1rem solid #ffffff;
+  border-bottom: 0.1rem solid #ffffff;
+  transform: translateX(120%);
   transition: all 200ms ease-in-out;
-  list-style: none;
-  color: #6a6e81;
 }
 .c-burger-menu__inner--active {
-  transform: translateX(-900%);
+  transform: translateX(0%);
 }
-.c-burger-menu__inner li:hover {
-  color: #fcfefe;
+.c-nav .ul {
+  padding: 0;
+}
+.c-nav .ul li {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  padding-left: 2rem;
 }
 .c-main {
   width: fit-content;
