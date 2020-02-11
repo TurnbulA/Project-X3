@@ -1,15 +1,4 @@
-/* 
-background= #252a41         Main-Text= #fcfefe
-Items= #3b3f54              icon-Pink= #f936ae
-icon-Green= #339fc7         icon-Purple= #7a49c2
-icon-Blue= #635eef          icon-Orange= #ef8668
-Approved= #35d8d8           Approved-Text= #e0f5f5
-In-Progress= #e3effe        In-Progress-Text= #6492c9
-In-Review= #fbece7          In-Review-Text= #d6a292
-Waiting= #ebecee            Waiting-Text= #818893
-Para-Text= #6a6e81          Card-Title=  #232535
-Card-Text= #93959B          Project-Background = #FEFEFE
- */
+@import "variables.scss";
 
 @font-face {
   font-family: "avenir";
@@ -29,17 +18,17 @@ html {
   font-family: "avenir", sans-serif;
 }
 body {
-  background-color: #252a41;
+  background-color: $background;
   font-size: 3rem;
 }
 * {
   box-sizing: border-box;
 }
 .u-text--header {
-  color: #fcfefe;
+  color: $maintext;
 }
 .u-text--para {
-  color: #6a6e81;
+  color: $paratext;
 }
 
 .container {
@@ -67,18 +56,18 @@ body {
   height: auto;
   width: 10vw;
   flex-direction: column;
-  background-color: #3b3f54;
+  background-color: $items;
   align-items: flex-start;
   transform: translateX(-1000%);
   transition: all 200ms ease-in-out;
   list-style: none;
-  color: #6a6e81;
+  color: $paratext;
 }
 .c-burger-menu__inner--active {
   transform: translateX(-900%);
 }
 .c-burger-menu__inner li:hover {
-  color: #fcfefe;
+  color: $maintext;
 }
 .c-main {
   width: fit-content;
@@ -88,7 +77,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 1.5rem;
-  background-color: #3b3f54;
+  background-color: $items;
   padding-left: 2rem;
   height: 5.5rem;
 }
@@ -130,12 +119,16 @@ body {
   align-items: center;
   flex-direction: column;
   margin: auto;
-  color: #6a6e81;
+  color: $paratext;
   cursor: pointer;
+  &:hover {
+    color: $maintext;
+  }
+  &:hover .c-project--icon {
+    box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5);
+  }
 }
-.c-icon-container:hover {
-  color: #fcfefe;
-}
+
 .c-project--icon {
   width: 10rem;
   height: 10rem;
@@ -146,7 +139,7 @@ body {
 .c-icon-container:hover .c-project--icon {
   box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5);
 }
-.c-project--info {
+.c-project-info {
   position: absolute;
   margin-bottom: 2rem;
   top: 2rem;
@@ -154,7 +147,7 @@ body {
   height: 100%;
   width: 50%;
   border-radius: 3rem;
-  background-color: #fefefe;
+  background-color: $projectbackground;
   transition: all 200ms ease-in-out;
   transform: translateX(100%);
   &--active {
@@ -163,21 +156,21 @@ body {
 }
 .u-icon-color {
   &--pink {
-    background-color: #f936ae;
+    background-color: $pink;
   }
   &--green {
-    background-color: #339fc7;
+    background-color: $green;
   }
   &--blue {
-    background-color: #635eef;
+    background-color: $blue;
   }
   &--purple {
-    background-color: #7a49c2;
+    background-color: $purple;
   }
   &--orange {
-    background-color: #ef8668;
+    background-color: $orange;
   }
 }
-// icon-Pink= #f936ae
-// icon-Green= #339fc7      icon-Purple= #7a49c2
-// icon-Blue= #635eef       icon-Orange= #ef8668
+// icon-Pink: #f936ae
+// icon-Green: #339fc7      icon-Purple: #7a49c2
+// icon-Blue: #635eef       icon-Orange: #ef8668

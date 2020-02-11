@@ -1,15 +1,3 @@
-/* 
-background= #252a41         Main-Text= #fcfefe
-Items= #3b3f54              icon-Pink= #f936ae
-icon-Green= #339fc7         icon-Purple= #7a49c2
-icon-Blue= #635eef          icon-Orange= #ef8668
-Approved= #35d8d8           Approved-Text= #e0f5f5
-In-Progress= #e3effe        In-Progress-Text= #6492c9
-In-Review= #fbece7          In-Review-Text= #d6a292
-Waiting= #ebecee            Waiting-Text= #818893
-Para-Text= #6a6e81          Card-Title=  #232535
-Card-Text= #93959B          Project-Background = #FEFEFE
- */
 @font-face {
   font-family: "avenir";
   src: url(/Resources/avenir_sv/font/AvenirLTStd-Book) format("avenir-book");
@@ -125,9 +113,10 @@ body {
   margin: auto;
   color: #6a6e81;
   cursor: pointer; }
-
-.c-icon-container:hover {
-  color: #fcfefe; }
+  .c-icon-container:hover {
+    color: #fcfefe; }
+  .c-icon-container:hover .c-project--icon {
+    box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5); }
 
 .c-project--icon {
   width: 10rem;
@@ -139,7 +128,7 @@ body {
 .c-icon-container:hover .c-project--icon {
   box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5); }
 
-.c-project--info {
+.c-project-info {
   position: absolute;
   margin-bottom: 2rem;
   top: 2rem;
@@ -150,7 +139,7 @@ body {
   background-color: #fefefe;
   transition: all 200ms ease-in-out;
   transform: translateX(100%); }
-  .c-project--info--active {
+  .c-project-info--active {
     transform: translateX(-2.5%); }
 
 .u-icon-color--pink {
