@@ -1,14 +1,14 @@
 /* 
-background= #252a41        Main-Text= #fcfefe
-Items= #3b3f54             Button-Pink= #f936ae
-Button-Green= #339fc7      Button-Purple= #7a49c2
-Button-Blue= #635eef       Button-Orange= #ef8668
-Approved= #35d8d8          Approved-Text= #e0f5f5
-In-Progress= #e3effe       In-Progress-Text= #6492c9
-In-Review= #fbece7         In-Review-Text= #d6a292
-Waiting= #ebecee           Waiting-Text= #818893
-Para-Text= #6a6e81         Card-Title=  #232535
-Card-Text= #93959B
+background= #252a41         Main-Text= #fcfefe
+Items= #3b3f54              icon-Pink= #f936ae
+icon-Green= #339fc7         icon-Purple= #7a49c2
+icon-Blue= #635eef          icon-Orange= #ef8668
+Approved= #35d8d8           Approved-Text= #e0f5f5
+In-Progress= #e3effe        In-Progress-Text= #6492c9
+In-Review= #fbece7          In-Review-Text= #d6a292
+Waiting= #ebecee            Waiting-Text= #818893
+Para-Text= #6a6e81          Card-Title=  #232535
+Card-Text= #93959B          Project-Background = #FEFEFE
  */
 @font-face {
   font-family: "avenir";
@@ -38,10 +38,12 @@ body {
 
 .container {
   padding: 3rem; }
+  .container--shift-left {
+    width: 50%; }
 
 .c-nav-button {
-  height: 5rem;
-  width: 5rem;
+  max-height: 5rem;
+  max-width: 5rem;
   margin-bottom: 5rem;
   cursor: pointer; }
 
@@ -109,3 +111,59 @@ body {
 .c-header-text {
   margin: 0 auto;
   padding-bottom: 5rem; }
+
+.c-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.c-icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  color: #6a6e81;
+  cursor: pointer; }
+
+.c-icon-container:hover {
+  color: #fcfefe; }
+
+.c-project--icon {
+  width: 10rem;
+  height: 10rem;
+  border: none;
+  border-radius: 1.7rem;
+  cursor: pointer; }
+
+.c-icon-container:hover .c-project--icon {
+  box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5); }
+
+.c-project--info {
+  position: absolute;
+  margin-bottom: 2rem;
+  top: 2rem;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: 3rem;
+  background-color: #fefefe;
+  transition: all 200ms ease-in-out;
+  transform: translateX(100%); }
+  .c-project--info--active {
+    transform: translateX(-2.5%); }
+
+.u-icon-color--pink {
+  background-color: #f936ae; }
+
+.u-icon-color--green {
+  background-color: #339fc7; }
+
+.u-icon-color--blue {
+  background-color: #635eef; }
+
+.u-icon-color--purple {
+  background-color: #7a49c2; }
+
+.u-icon-color--orange {
+  background-color: #ef8668; }
