@@ -7,8 +7,8 @@ const icons = [...document.querySelectorAll(".c-icon-container")];
 icons.forEach(icon => {
   icon.addEventListener("click", () => {
     const projectInfo = document.querySelector(".c-project-info");
-    const bodyContainer = document.querySelector(".container");
+    const bodyContainer = document.querySelector(".c-main ");
     projectInfo.classList.toggle("c-project-info--active");
-    bodyContainer.classList.toggle("container--shift-left");
+    bodyContainer.classList.toggle("c-main--shift-left");
   });
 });
