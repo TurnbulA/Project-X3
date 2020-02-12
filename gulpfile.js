@@ -1,13 +1,5 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-const minify = require("gulp-minify");
-
-gulp.task("compress", () => {
-  return gulp
-    .src("app/js/*.js")
-    .pipe(minify())
-    .pipe(gulp.dest("dist/"));
-});
 
 gulp.task("sass", () => {
   return gulp
