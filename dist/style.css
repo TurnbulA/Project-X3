@@ -131,41 +131,36 @@
   top: 5rem;
   position: relative;
   list-style: none; }
-
-.c-list-item__input {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  cursor: pointer;
-  padding: 0 0 0 6rem; }
-
-.c-list-item__input input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer; }
-
-.c-list-item__input--custom {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  width: 5rem;
-  padding: auto;
-  background-color: transparent;
-  border-radius: 100rem;
-  border: 0.25rem solid #35d8d8;
-  cursor: pointer;
-  transition: all 200ms ease-in-out; }
-
-.c-list-item__input--custom::after {
-  position: absolute;
-  content: "";
-  border: solid #35d8d8;
-  border-width: 0; }
-
-.c-list-item__input input:checked ~ .c-list-item__input--custom {
-  background: #35d8d8; }
+  .c-list-item__input {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 0 0 6rem; }
+    .c-list-item__input--custom {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 5rem;
+      padding: auto;
+      background-color: transparent;
+      border-radius: 100rem;
+      border: 0.25rem solid #35d8d8;
+      cursor: pointer;
+      transition: all 200ms ease-in-out; }
+    .c-list-item__input--custom::after {
+      position: absolute;
+      content: "";
+      border: solid #35d8d8;
+      border-width: 0; }
+    .c-list-item__input--checkbox {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+    .c-list-item__input--checkbox:checked ~ .c-list-item__input--custom {
+      background: #35d8d8; }
 
 @font-face {
   font-family: "avenir";

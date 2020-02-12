@@ -7,46 +7,39 @@
   top: 5rem;
   position: relative;
   list-style: none;
-}
-.c-list-item__input {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  cursor: pointer;
-  padding: 0 0 0 6rem;
-}
-
-.c-list-item__input input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.c-list-item__input {
-  &--custom {
-    position: absolute;
-    display: flex;
-    justify-content: center;
+  &__input {
+    height: 100%;
+    width: 100%;
     align-items: center;
-    height: 5rem;
-    width: 5rem;
-    padding: auto;
-    background-color: transparent;
-    border-radius: 100rem;
-    border: 0.25rem solid $clr-approved;
     cursor: pointer;
-    transition: all 200ms ease-in-out;
+    padding: 0 0 0 6rem;
+    &--custom {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 5rem;
+      padding: auto;
+      background-color: transparent;
+      border-radius: 100rem;
+      border: 0.25rem solid $clr-approved;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+    }
+    &--custom::after {
+      position: absolute;
+      content: "";
+      border: solid $clr-approved;
+      border-width: 0;
+    }
+    &--checkbox {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    &--checkbox:checked ~ &--custom {
+      background: $clr-approved;
+    }
   }
-}
-.c-list-item__input {
-  &--custom::after {
-    position: absolute;
-    content: "";
-    border: solid $clr-approved;
-    border-width: 0;
-  }
-}
-
-.c-list-item__input input:checked ~ .c-list-item__input--custom {
-  background: $clr-approved;
 }
