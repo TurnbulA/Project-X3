@@ -1,0 +1,30 @@
+.c-search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  background-color: #3b3f54;
+  padding-left: 2rem;
+  height: 5.5rem; }
+
+.c-search-bar__input {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none; }
+
+.c-form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
+
+.search-icon {
+  height: 2.5rem;
+  width: 2rem; }
+
+.c-search-bar__input::placeholder {
+  font-family: "avenir", sans-serif;
+  color: #bec4dc; }
