@@ -51,10 +51,10 @@ body {
   align-items: center;
   flex-direction: column;
   margin: auto auto auto 0;
-  color: $paratext;
+  color: $clr-para-text;
   cursor: pointer;
   &:hover {
-    color: $maintext;
+    color: $clr-main-text;
   }
   &:hover .c-project--icon {
     box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5);
