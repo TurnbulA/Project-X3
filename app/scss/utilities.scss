@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+.u-text--header {
+  color: $clr-main-text;
+}
+
+.u-text--para {
+  color: $clr-para-text;
+}
+
+.u-icon-color {
+  &--pink {
+    background-image: linear-gradient(to top right, $pink1, $pink2);
+  }
+  &--green {
+    background-image: linear-gradient(to top right, $green1, $green2);
+  }
+  &--blue {
+    background-image: linear-gradient(to top right, $blue1, $blue2);
+  }
+  &--purple {
+    background-image: linear-gradient(to top right, $purple1, $purple2);
+  }
+  &--orange {
+    background-image: linear-gradient(to top right, $orange1, $orange2);
+  }
+}
