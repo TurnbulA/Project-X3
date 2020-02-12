@@ -34,11 +34,11 @@
   transition: all 200ms ease-in-out;
   color: $clr-para-text;
   list-style: none;
+  &--active {
+    transform: translateX(0%);
+  }
 }
 
-.c-burger-menu__inner--active {
-  transform: translateX(0%);
-}
 .c-burger-menu__inner li:hover {
   color: $clr-main-text;
 }

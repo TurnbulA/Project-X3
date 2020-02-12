@@ -8,16 +8,19 @@
   background-color: $clr-items;
   padding-left: 2rem;
   height: 5.5rem;
-}
-
-.c-search-bar__input {
-  margin-left: 2rem;
-  font-size: 1.6rem;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: transparent;
-  outline: none;
+  &__input {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #bec4dc;
+    outline: none;
+    &::placeholder {
+      font-family: "avenir", sans-serif;
+    }
+  }
 }
 
 .c-form {
@@ -30,9 +33,4 @@
 .search-icon {
   height: 2.5rem;
   width: 2rem;
-}
-
-.c-search-bar__input::placeholder {
-  font-family: "avenir", sans-serif;
-  color: #bec4dc;
 }

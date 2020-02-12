@@ -38,9 +38,8 @@
   transition: all 200ms ease-in-out;
   color: #6a6e81;
   list-style: none; }
-
-.c-burger-menu__inner--active {
-  transform: translateX(0%); }
+  .c-burger-menu__inner--active {
+    transform: translateX(0%); }
 
 .c-burger-menu__inner li:hover {
   color: #fcfefe; }
