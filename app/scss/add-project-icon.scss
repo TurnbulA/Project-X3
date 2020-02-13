@@ -1,0 +1,13 @@
+.c-body__add-project {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  outline: none;
+  &--icon {
+    border-radius: 1rem;
+    &:hover {
+      box-shadow: 0 0 3rem rgba(149, 149, 149, 0.5);
+    }
+  }
+}

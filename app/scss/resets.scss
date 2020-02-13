@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+html {
+  font-size: 10px;
+  font-family: "avenir", sans-serif;
+}
+body {
+  background-color: $background;
+  font-size: 3rem;
+}
+input {
+  font-family: "avenir", sans-serif;
+}
+h1 {
+  margin: 0;
+}
+h3 {
+  color: $clr-para-text;
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+li {
+  margin: 0 auto;
+}

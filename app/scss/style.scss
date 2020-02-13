@@ -1,22 +1,13 @@
+@import "resets.scss";
 @import "variables.scss";
 @import "utilities.scss";
 @import "burger-menu.scss";
 @import "searchBar.scss";
 @import "projectIcons.scss";
-@import "checkbox.scss";
 @import "avenir-font.scss";
-
-html {
-  font-size: 10px;
-  font-family: "avenir", sans-serif;
-}
-body {
-  background-color: $background;
-  font-size: 3rem;
-}
-* {
-  box-sizing: border-box;
-}
+@import "list-item.scss";
+@import "add-project-icon.scss";
+@import "add-project-popup.scss";
 
 .container {
   padding: 3rem;
@@ -36,9 +27,11 @@ body {
   padding-bottom: 5rem;
 }
 .c-project-container {
+  margin-top: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 .c-icon-container {
   display: flex;

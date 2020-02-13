@@ -14,13 +14,12 @@
     cursor: pointer;
     padding: 0 0 0 6rem;
     &--custom {
-      position: absolute;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 5rem;
       width: 5rem;
-      padding: auto;
       background-color: transparent;
       border-radius: 100rem;
       border: 0.25rem solid $clr-approved;
