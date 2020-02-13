@@ -3,8 +3,10 @@
 @import "burger-menu.scss";
 @import "searchBar.scss";
 @import "projectIcons.scss";
-@import "checkbox.scss";
 @import "avenir-font.scss";
+@import "list-item.scss";
+@import "add-project-icon.scss";
+@import "add-project-popup.scss";
 
 html {
   font-size: 10px;
@@ -13,6 +15,9 @@ html {
 body {
   background-color: $background;
   font-size: 3rem;
+}
+h1 {
+  margin: 0;
 }
 * {
   box-sizing: border-box;
@@ -36,8 +41,9 @@ body {
   padding-bottom: 5rem;
 }
 .c-project-container {
+  margin-top: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .c-icon-container {
