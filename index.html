@@ -103,19 +103,22 @@
         <section class="c-body">
           <h1 class="c-body__text u-text--header">Projects</h1>
           <div class="c-project-container">
-            <div class="c-icon-container">
-              <button class="c-project--icon u-icon-color--pink"></button>
-              <p class="c-project--name">Project 1</p>
+            <ul>
+              <li class="c-icon-container">
+                <button class="c-project--icon u-icon-color--pink"></button>
+                <p class="c-project--name">Project 1</p>
+              </li>
+              <li class="c-icon-container">
+                <button class="c-project--icon u-icon-color--green"></button>
+                <p class="c-project--name">Project 2</p>
+              </li>
+              <li class="c-icon-container">
+                <button class="c-project--icon u-icon-color--blue"></button>
+                <p class="c-project--name">Project 3</p>
+              </li>
             </div>
-            <div class="c-icon-container">
-              <button class="c-project--icon u-icon-color--green"></button>
-              <p class="c-project--name">Project 2</p>
-            </div>
-            <div class="c-icon-container">
-              <button class="c-project--icon u-icon-color--blue"></button>
-              <p class="c-project--name">Project 3</p>
-            </div>
-          </div>
+            </ul>
+            
           <div class="c-body__add-project">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -203,14 +206,32 @@
           class="c-add-project__input"
           placeholder="Enter new project name"
         />
+        <h3>Select a colour</h3>
         <div class="c-add-project__colour">
-          <div class="c-add-project__colour--item u-icon-color--pink"></div>
-          <div class="c-add-project__colour--item u-icon-color--green"></div>
-          <div class="c-add-project__colour--item u-icon-color--blue"></div>
-          <div class="c-add-project__colour--item u-icon-color--purple"></div>
-          <div class="c-add-project__colour--item u-icon-color--orange"></div>
+          <div
+            class="c-add-project__colour--item u-icon-color--pink"
+            
+          ></div>
+          <div
+            class="c-add-project__colour--item u-icon-color--green"
+            
+          ></div>
+          <div
+            class="c-add-project__colour--item u-icon-color--blue"
+            
+          ></div>
+          <div
+            class="c-add-project__colour--item u-icon-color--purple"
+            
+          ></div>
+          <div
+            class="c-add-project__colour--item u-icon-color--orange"
+            
+          ></div>
         </div>
-        <button type="submit"></button>
+        <button type="submit" class="c-add-project--submit">
+          Create Project
+        </button>
       </form>
     </div>
   </body>

@@ -1,34 +1,18 @@
 @import "variables.scss";
 @import "avenir-font.scss";
+@import "resets.scss";
 
-.c-add-project__header {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.c-add-project__close {
-  display: flex;
-  align-items: center;
-  &--cross {
-    fill: #f64747;
-    cursor: pointer;
-    &:hover {
-      box-shadow: 0 0 3rem rgba(246, 71, 71, 0.75);
-    }
-  }
-}
 .c-add-project {
   &__popup {
-    position: relative;
-    top: -55rem;
-    width: 90rem;
-    height: 50rem;
+    position: absolute;
+    bottom: 20rem;
+    left: 60rem;
+    width: 70rem;
+    height: 45rem;
     border-radius: 5rem;
     background-color: $clr-main-text;
     box-shadow: 0 0 3rem rgba(120, 120, 120, 0.75);
     display: none;
-    margin: auto;
     padding: 0.5rem 2rem;
     &--active {
       display: block;
@@ -36,32 +20,62 @@
     }
   }
   &__header {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
     color: $clr-para-text;
   }
-}
-.c-add-project--form {
-  width: 70%;
-  margin-top: 2rem;
-  height: 5rem;
-  width: 70%;
-}
-.c-add-project__input {
-  font-family: "avenir", sans-serif;
-  padding-left: 1rem;
-  height: 5rem;
-  width: 100%;
-}
-
-.c-add-project__colour {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  &--item {
-    border-radius: 1rem;
-    margin: 0 auto;
+  &__close {
+    display: flex;
+    align-items: center;
+    &--cross {
+      fill: #f64747;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 3rem rgba(246, 71, 71, 0.75);
+      }
+    }
+  }
+  &--form {
+    margin-top: 2rem;
     height: 5rem;
-    width: 5rem;
+    width: 60rem;
+  }
+  &__input {
+    font-family: "avenir", sans-serif;
+    border-radius: 1rem;
+    border: 0.1rem solid $background;
+    padding-left: 1rem;
+    height: 5rem;
+    width: 100%;
+  }
+  &__colour {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    &--item {
+      border-radius: 1rem;
+      margin: 0 auto;
+      height: 5rem;
+      width: 5rem;
+      cursor: pointer;
+    }
+  }
+  &--submit {
+    margin-top: 3rem;
+    height: 5rem;
+    width: 15rem;
+    font-family: "avenir", sans-serif;
+    background-color: $clr-items;
+    color: $clr-main-text;
     cursor: pointer;
+    border-radius: 1rem;
+    border: 0.1rem solid $background;
+    outline: none;
+    &:hover {
+      box-shadow: 0 0 1.5rem rgba(37, 42, 65, 0.75);
+    }
   }
 }

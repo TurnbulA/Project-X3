@@ -1,3 +1,4 @@
+@import "resets.scss";
 @import "variables.scss";
 @import "utilities.scss";
 @import "burger-menu.scss";
@@ -7,21 +8,6 @@
 @import "list-item.scss";
 @import "add-project-icon.scss";
 @import "add-project-popup.scss";
-
-html {
-  font-size: 10px;
-  font-family: "avenir", sans-serif;
-}
-body {
-  background-color: $background;
-  font-size: 3rem;
-}
-h1 {
-  margin: 0;
-}
-* {
-  box-sizing: border-box;
-}
 
 .container {
   padding: 3rem;
@@ -45,6 +31,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 .c-icon-container {
   display: flex;
