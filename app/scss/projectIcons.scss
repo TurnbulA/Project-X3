@@ -3,8 +3,7 @@
 .c-project {
   &-container {
     margin-top: 5rem;
-    width: 66rem;
-    max-width: 66rem;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -22,8 +21,10 @@
 }
 .c-icon-container {
   list-style: none;
+  text-align: center;
   color: $clr-para-text;
   cursor: pointer;
+  width: 100%;
   flex-basis: 33%;
   &:hover {
     color: $clr-main-text;

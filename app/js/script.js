@@ -19,8 +19,10 @@ icons.forEach(icon => {
 document
   .querySelector(".c-body__add-project--icon")
   .addEventListener("click", () => {
-    const addProject = document.querySelector(".c-add-project__popup");
-    addProject.classList.toggle("c-add-project__popup--active");
+    const addProject = document.querySelector(
+      ".c-add-project__popup-container"
+    );
+    addProject.classList.toggle("c-add-project__popup-container--active");
   });
 
 //Handles closing of add project popup
@@ -77,7 +79,6 @@ const createLi = () => {
   const button = document.createElement("button");
   button.setAttribute("class", "c-project--icon");
   button.classList.add(color);
-  console.log(button.classList);
   const p = document.createElement("p");
   p.innerHTML = projectName.value;
   projectName.value = "";

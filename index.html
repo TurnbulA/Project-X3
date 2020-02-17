@@ -57,7 +57,63 @@
           </ul>
         </nav>
       </section>
+
       <div class="c-main">
+        <div class="c-add-project__popup-container">
+          <div class="c-add-project__popup">
+            <div class="c-add-project__header">
+              <h1>Create a new project</h1>
+              <div class="c-add-project__close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  class="c-add-project__close--cross"
+                >
+                  <path
+                    id="Close"
+                    d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
+                    transform="translate(0 -0.135)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <form class="c-add-project--form">
+              <input
+                type="text"
+                class="c-add-project__input"
+                placeholder="Enter new project name"
+              />
+              <h3>Select a color</h3>
+              <div class="c-add-project__color">
+                <div
+                  class="c-add-project__color--item u-icon--colour-pink"
+                  data-color="u-icon--colour-pink"
+                ></div>
+                <div
+                  class="c-add-project__color--item u-icon--colour-green"
+                  data-color="u-icon--colour-green"
+                ></div>
+                <div
+                  class="c-add-project__color--item u-icon--colour-blue"
+                  data-color="u-icon--colour-blue"
+                ></div>
+                <div
+                  class="c-add-project__color--item u-icon--colour-purple"
+                  data-color="u-icon--colour-purple"
+                ></div>
+                <div
+                  class="c-add-project__color--item u-icon--colour-orange"
+                  data-color="u-icon--colour-orange"
+                ></div>
+              </div>
+              <button type="submit" class="c-add-project--submit">
+                Create Project
+              </button>
+            </form>
+          </div>
+        </div>
         <section class="c-header">
           <h1 class="c-header__text u-text--header">Hello There</h1>
           <p class="c-header__text u-text--para">
@@ -100,23 +156,25 @@
             </form>
           </div>
         </section>
+
         <section class="c-body">
           <h1 class="c-body__text u-text--header">Projects</h1>
           <ul class="c-project-container">
             <li class="c-icon-container">
-              <button class="c-project--icon u-icon-color--pink"></button>
+              <button class="c-project--icon u-icon--colour-pink"></button>
               <p class="c-project--name">Project 1</p>
             </li>
             <li class="c-icon-container">
-              <button class="c-project--icon u-icon-color--green"></button>
+              <button class="c-project--icon u-icon--colour-green"></button>
               <p class="c-project--name">Project 2</p>
             </li>
             <li class="c-icon-container">
-              <button class="c-project--icon u-icon-color--blue"></button>
+              <button class="c-project--icon u-icon--colour-blue"></button>
               <p class="c-project--name">Project 3</p>
             </li>
           </ul>
-
+        </section>
+        <div class="c-body__add-project-container">
           <div class="c-body__add-project">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +210,7 @@
               </g>
             </svg>
           </div>
-        </section>
+        </div>
       </div>
     </div>
     <div class="c-project-info">
@@ -177,60 +235,6 @@
           <div class="c-list-item__text"></div>
         </label>
       </li>
-    </div>
-
-    <div class="c-add-project__popup">
-      <div class="c-add-project__header">
-        <h1>Create a new project</h1>
-        <div class="c-add-project__close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            class="c-add-project__close--cross"
-          >
-            <path
-              id="Close"
-              d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
-              transform="translate(0 -0.135)"
-            />
-          </svg>
-        </div>
-      </div>
-      <form class="c-add-project--form">
-        <input
-          type="text"
-          class="c-add-project__input"
-          placeholder="Enter new project name"
-        />
-        <h3>Select a color</h3>
-        <div class="c-add-project__color">
-          <div
-            class="c-add-project__color--item u-icon-color--pink"
-            data-color="u-icon-color--pink"
-          ></div>
-          <div
-            class="c-add-project__color--item u-icon-color--green"
-            data-color="u-icon-color--green"
-          ></div>
-          <div
-            class="c-add-project__color--item u-icon-color--blue"
-            data-color="u-icon-color--blue"
-          ></div>
-          <div
-            class="c-add-project__color--item u-icon-color--purple"
-            data-color="u-icon-color--purple"
-          ></div>
-          <div
-            class="c-add-project__color--item u-icon-color--orange"
-            data-color="u-icon-color--orange"
-          ></div>
-        </div>
-        <button type="submit" class="c-add-project--submit">
-          Create Project
-        </button>
-      </form>
     </div>
   </body>
   <script src="dist/script-min.js"></script>
