@@ -1,26 +1,34 @@
 @import "variables.scss";
 
+.c-project {
+  &-container {
+    margin-top: 5rem;
+    width: 66rem;
+    max-width: 66rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &--icon {
+    min-width: 11.5rem;
+    max-width: 20rem;
+    height: 12rem;
+    border: none;
+    border-radius: 1.7rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
 .c-icon-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
+  list-style: none;
   color: $clr-para-text;
   cursor: pointer;
+  flex-basis: 33%;
   &:hover {
     color: $clr-main-text;
   }
   &:hover .c-project--icon {
     box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5);
   }
-}
-
-.c-project--icon {
-  width: 100%;
-  height: 12rem;
-  border: none;
-  border-radius: 1.7rem;
-  cursor: pointer;
-  outline: none;
 }

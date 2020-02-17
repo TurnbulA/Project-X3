@@ -29,28 +29,28 @@ document
   .addEventListener("click", () => {
     const closeAddProject = document.querySelector(".c-add-project__popup");
     closeAddProject.classList.toggle("c-add-project__popup--active");
-    removeActiveColour();
+    removeActivecolor();
   });
 
-//Creates an array of project colours
-const newProjectColours = [
-  ...document.querySelectorAll(".c-add-project__colour--item")
+//Creates an array of project colors
+const newProjectcolors = [
+  ...document.querySelectorAll(".c-add-project__color--item")
 ];
 
-//Checks if there is an active colour and removes that class
-const removeActiveColour = () => {
-  const activeColours = [...document.querySelectorAll(".isActive")];
-  activeColours.forEach(activeColour => {
-    activeColour.classList.remove("isActive");
+//Checks if there is an active color and removes that class
+const removeActivecolor = () => {
+  const activecolors = [...document.querySelectorAll(".isActive")];
+  activecolors.forEach(activecolor => {
+    activecolor.classList.remove("isActive");
   });
 };
 
-//Adds active colour to 1 item
-newProjectColours.forEach(newProjectColour => {
-  newProjectColour.addEventListener("click", () => {
-    removeActiveColour();
-    newProjectColour.classList.add("isActive");
-    return newProjectColour;
+//Adds active color to 1 item
+newProjectcolors.forEach(newProjectcolor => {
+  newProjectcolor.addEventListener("click", () => {
+    removeActivecolor();
+    newProjectcolor.classList.add("isActive");
+    return newProjectcolor;
   });
 });
 
@@ -60,17 +60,37 @@ const projectForm = document.querySelector("form");
 const projectUl = document.querySelector(".c-project-container");
 const submitButton = document.querySelector(".c-add-project--submit");
 const projectName = document.querySelector(".c-add-project__input");
-const projectColour = document.querySelector(".c-add-project__colour--item");
+const projectcolors = [
+  ...document.querySelectorAll(".c-add-project__color--item")
+];
+let color = "";
+
+projectcolors.forEach(projectcolor => {
+  projectcolor.addEventListener("click", e => {
+    color = e.target.getAttribute("data-color");
+  });
+});
 
 const createLi = () => {
-  console.log("2");
   const li = document.createElement("li");
   li.setAttribute("class", "c-icon-container");
-  console.log(li.classList);
-  projectUl.innerHTML += li;
+  const button = document.createElement("button");
+  button.setAttribute("class", "c-project--icon");
+  button.classList.add(color);
+  console.log(button.classList);
+  const p = document.createElement("p");
+  p.innerHTML = projectName.value;
+  projectName.value = "";
+  p.setAttribute("class", "c-project-name");
+  li.appendChild(button);
+  li.appendChild(p);
+  projectUl.appendChild(li);
 };
 
-submitButton.addEventListener("click", () => {
-  console.log("1");
+submitButton.addEventListener("click", e => {
+  e.preventDefault();
+  const closeAddProject = document.querySelector(".c-add-project__popup");
+  closeAddProject.classList.toggle("c-add-project__popup--active");
+  removeActivecolor();
   createLi();
 });

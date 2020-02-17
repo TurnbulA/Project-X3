@@ -26,28 +26,6 @@
   margin: 0 auto;
   padding-bottom: 5rem;
 }
-.c-project-container {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-.c-icon-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin: auto auto auto 0;
-  color: $clr-para-text;
-  cursor: pointer;
-  &:hover {
-    color: $clr-main-text;
-  }
-  &:hover .c-project--icon {
-    box-shadow: 0 0 2rem rgba(149, 149, 149, 0.5);
-  }
-}
 
 .c-project-info {
   position: absolute;
