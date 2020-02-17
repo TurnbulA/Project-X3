@@ -49,7 +49,28 @@ const removeActiveColour = () => {
 newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", () => {
     removeActiveColour();
-    newProjectColour.classList.toggle("isActive");
+    newProjectColour.classList.add("isActive");
     return newProjectColour;
   });
+});
+
+//Creates New project Item
+
+const projectForm = document.querySelector("form");
+const projectUl = document.querySelector(".c-project-container");
+const submitButton = document.querySelector(".c-add-project--submit");
+const projectName = document.querySelector(".c-add-project__input");
+const projectColour = document.querySelector(".c-add-project__colour--item");
+
+const createLi = () => {
+  console.log("2");
+  const li = document.createElement("li");
+  li.setAttribute("class", "c-icon-container");
+  console.log(li.classList);
+  projectUl.innerHTML += li;
+};
+
+submitButton.addEventListener("click", () => {
+  console.log("1");
+  createLi();
 });
