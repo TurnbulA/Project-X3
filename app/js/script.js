@@ -29,16 +29,15 @@ document
 document
   .querySelector(".c-add-project__close--cross")
   .addEventListener("click", () => {
-    const closeAddProject = document.querySelector(".c-add-project__popup");
-    closeAddProject.classList.toggle("c-add-project__popup--active");
+    closePopup();
     removeActivecolor();
   });
-
-//Creates an array of project colors
-const newProjectcolors = [
-  ...document.querySelectorAll(".c-add-project__color--item")
-];
-
+const closePopup = () => {
+  const closeAddProject = document.querySelector(
+    ".c-add-project__popup-container"
+  );
+  closeAddProject.classList.toggle("c-add-project__popup-container--active");
+};
 //Checks if there is an active color and removes that class
 const removeActivecolor = () => {
   const activecolors = [...document.querySelectorAll(".isActive")];
@@ -47,6 +46,10 @@ const removeActivecolor = () => {
   });
 };
 
+//Creates an array of project colors
+const newProjectcolors = [
+  ...document.querySelectorAll(".c-add-project__color--item")
+];
 //Adds active color to 1 item
 newProjectcolors.forEach(newProjectcolor => {
   newProjectcolor.addEventListener("click", () => {
@@ -93,5 +96,6 @@ submitButton.addEventListener("click", e => {
   const closeAddProject = document.querySelector(".c-add-project__popup");
   closeAddProject.classList.toggle("c-add-project__popup--active");
   removeActivecolor();
+  closePopup();
   createLi();
 });
