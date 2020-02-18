@@ -9,7 +9,6 @@ const projectInfoPopup = () => {
   const icons = [...document.querySelectorAll(".c-icon-container")];
   icons.forEach(icon => {
     icon.addEventListener("click", () => {
-      console.log("yo sup dawg");
       const projectInfo = document.querySelector(".c-project-info");
       const bodyContainer = document.querySelector(".c-main ");
       projectInfo.classList.toggle("c-project-info--active");
@@ -20,8 +19,10 @@ const projectInfoPopup = () => {
 
 //Handles opening of add project popup
 const openPopup = () => {
-  const addProject = document.querySelector(".c-add-project__popup-container");
-  addProject.classList.toggle("c-add-project__popup-container--active");
+  const addProjectButton = document.querySelector(
+    ".c-add-project__popup-container"
+  );
+  addProjectButton.classList.toggle("c-add-project__popup-container--active");
 };
 
 document
@@ -126,10 +127,4 @@ const projectValidation = () => {
     openPopup();
     return false;
   }
-  // else if ((!color && color.length === 0) || inputValue.value === "") {
-  //   alert("Fill out a name and pick a colour");
-  //   removeActivecolor();
-  //   openPopup();
-  //   return false;
-  // }
 };
