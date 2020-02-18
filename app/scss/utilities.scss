@@ -8,8 +8,8 @@
   color: $clr-para-text;
 }
 
-.u-icon-color {
-  &--pink {
+.u-icon--colour {
+  &-pink {
     background-image: linear-gradient(to top right, $pink1, $pink2);
     &:hover {
       box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
@@ -18,7 +18,7 @@
       box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
     }
   }
-  &--green {
+  &-green {
     background-image: linear-gradient(to top right, $green1, $green2);
     &:hover {
       box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
@@ -27,7 +27,7 @@
       box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
     }
   }
-  &--blue {
+  &-blue {
     background-image: linear-gradient(to top right, $blue1, $blue2);
     &:hover {
       box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
@@ -36,7 +36,7 @@
       box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
     }
   }
-  &--purple {
+  &-purple {
     background-image: linear-gradient(to top right, $purple1, $purple2);
     &:hover {
       box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
@@ -45,7 +45,7 @@
       box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
     }
   }
-  &--orange {
+  &-orange {
     background-image: linear-gradient(to top right, $orange1, $orange2);
     &:hover {
       box-shadow: 0 0 2rem rgba(248, 190, 115, 1);

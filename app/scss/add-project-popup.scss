@@ -4,19 +4,26 @@
 
 .c-add-project {
   &__popup {
-    position: absolute;
-    bottom: 20rem;
-    left: 60rem;
+    margin: auto auto 0 auto;
     width: 70rem;
     height: 45rem;
     border-radius: 5rem;
     background-color: $clr-main-text;
     box-shadow: 0 0 3rem rgba(120, 120, 120, 0.75);
-    display: none;
     padding: 0.5rem 2rem;
-    &--active {
-      display: block;
+
+    &-container {
+      position: absolute;
       z-index: 3;
+      width: 100%;
+      height: 50rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      &--active {
+        display: block;
+      }
     }
   }
   &__header {
@@ -51,7 +58,7 @@
     height: 5rem;
     width: 100%;
   }
-  &__colour {
+  &__color {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
