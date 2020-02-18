@@ -5,24 +5,29 @@ document.querySelector(".c-burger-menu").addEventListener("click", () => {
 });
 
 // Handles project selection, produces project popup and shifts main body
-const icons = [...document.querySelectorAll(".c-icon-container")];
-icons.forEach(icon => {
-  icon.addEventListener("click", () => {
-    const projectInfo = document.querySelector(".c-project-info");
-    const bodyContainer = document.querySelector(".c-main ");
-    projectInfo.classList.toggle("c-project-info--active");
-    bodyContainer.classList.toggle("c-main--shift-left");
+const projectInfoPopup = () => {
+  const icons = [...document.querySelectorAll(".c-icon-container")];
+  icons.forEach(icon => {
+    icon.addEventListener("click", () => {
+      console.log("yo sup dawg");
+      const projectInfo = document.querySelector(".c-project-info");
+      const bodyContainer = document.querySelector(".c-main ");
+      projectInfo.classList.toggle("c-project-info--active");
+      bodyContainer.classList.toggle("c-main--shift-left");
+    });
   });
-});
+};
 
 //Handles opening of add project popup
+const openPopup = () => {
+  const addProject = document.querySelector(".c-add-project__popup-container");
+  addProject.classList.toggle("c-add-project__popup-container--active");
+};
+
 document
   .querySelector(".c-body__add-project--icon")
   .addEventListener("click", () => {
-    const addProject = document.querySelector(
-      ".c-add-project__popup-container"
-    );
-    addProject.classList.toggle("c-add-project__popup-container--active");
+    openPopup();
   });
 
 //Handles closing of add project popup
@@ -93,9 +98,38 @@ const createLi = () => {
 
 submitButton.addEventListener("click", e => {
   e.preventDefault();
+  if (projectValidation() === false) {
+    removeActivecolor();
+    openPopup();
+    return;
+  }
+  createLi();
   const closeAddProject = document.querySelector(".c-add-project__popup");
   closeAddProject.classList.toggle("c-add-project__popup--active");
   removeActivecolor();
   closePopup();
-  createLi();
+  projectInfoPopup();
 });
+
+//Project items validation
+
+const projectValidation = () => {
+  const inputValue = document.querySelector(".c-add-project__input");
+  if (inputValue.value === "") {
+    alert("Fill out name");
+    removeActivecolor();
+    openPopup();
+    return false;
+  } else if (!color && color.length === 0) {
+    alert("Pick a colour");
+    removeActivecolor();
+    openPopup();
+    return false;
+  }
+  // else if ((!color && color.length === 0) || inputValue.value === "") {
+  //   alert("Fill out a name and pick a colour");
+  //   removeActivecolor();
+  //   openPopup();
+  //   return false;
+  // }
+};
