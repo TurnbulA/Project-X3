@@ -11,8 +11,11 @@ html {
 body {
   font-size: 1.6rem;
 }
-
+ul {
+  list-style: none;
+}
 .c-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
