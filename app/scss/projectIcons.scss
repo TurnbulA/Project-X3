@@ -1,0 +1,29 @@
+@import "variables.scss";
+.c-projects {
+  width: 25%;
+  margin: 0 auto;
+  &__list {
+    padding: 0;
+    color: $manatee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &--icon {
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--initals {
+    color: $blackSqueeze;
+  }
+}
