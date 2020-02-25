@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.c-header {
+  margin-top: 10rem;
+  width: 25%;
+  &--title {
+    color: $clr-main-text;
+    font-size: 4rem;
+  }
+  &--para {
+    color: $clr-para-text;
+    font-size: 2rem;
+  }
+}
