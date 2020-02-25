@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+.c-nav {
+  cursor: pointer;
+  position: fixed;
+  color: $stormGray;
+  font-size: 2.5rem;
+  &__list {
+    position: fixed;
+    left: 0;
+    transform: translateX(-110%);
+    width: 50rem;
+    position: absolute;
+    background-color: $brightGray;
+    transition: all 200ms ease-in-out;
+    border-radius: 3rem;
+    &--item {
+      list-style: none;
+      &:hover {
+        color: $blackSqueeze;
+        text-decoration: underline;
+      }
+    }
+    &--active {
+      transform: translateX(0%);
+    }
+  }
+}

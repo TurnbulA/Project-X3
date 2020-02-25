@@ -1,13 +1,5 @@
 @import "variables.scss";
 
-.u-text--header {
-  color: $clr-main-text;
-}
-
-.u-text--para {
-  color: $clr-para-text;
-}
-
 .u-icon--colour {
   &-pink {
     background-image: linear-gradient(to top right, $pink1, $pink2);
