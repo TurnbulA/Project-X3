@@ -3,7 +3,7 @@
 .c-nav {
   cursor: pointer;
   position: fixed;
-  color: $clr-para-text;
+  color: $stormGray;
   font-size: 2.5rem;
   &__list {
     position: fixed;
@@ -11,13 +11,13 @@
     transform: translateX(-110%);
     width: 50rem;
     position: absolute;
-    background-color: $clr-items;
+    background-color: $brightGray;
     transition: all 200ms ease-in-out;
     border-radius: 3rem;
     &--item {
       list-style: none;
       &:hover {
-        color: $clr-main-text;
+        color: $blackSqueeze;
         text-decoration: underline;
       }
     }

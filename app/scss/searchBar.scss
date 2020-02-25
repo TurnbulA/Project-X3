@@ -3,7 +3,7 @@
 
 .c-search-bar {
   height: 5rem;
-  background-color: $clr-items;
+  background-color: $brightGray;
   display: flex;
   flex-direction: row;
   border-radius: 1.5rem;
@@ -26,9 +26,9 @@
     border: none;
     height: 100%;
     width: 100%;
-    color: $clr-para-text;
+    color: $stormGray;
     &::placeholder {
-      color: $clr-para-text;
+      color: $stormGray;
       font-size: 2rem;
     }
   }
