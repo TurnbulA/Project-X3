@@ -4,6 +4,7 @@ document
     document
       .querySelector(".c-add-project__container")
       .classList.toggle("c-add-project__container--active");
+    resetForm();
   });
 
 document

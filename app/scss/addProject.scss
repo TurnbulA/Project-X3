@@ -20,8 +20,6 @@
     background-color: $blackSqueeze;
     left: 25%;
     right: 25%;
-    width: 94.35rem;
-    max-width: 94.35rem;
     z-index: 3;
     padding: 3rem;
     display: none;
@@ -31,9 +29,13 @@
       display: block;
     }
   }
+  &__body {
+    width: 50%;
+  }
   &__form {
     display: flex;
     flex-direction: column;
+    width: 50%;
   }
   &__header {
     display: flex;
@@ -54,7 +56,6 @@
   }
   &__input {
     &--title {
-      width: 50%;
       height: 5rem;
       margin: 2rem 0 2rem 0;
       padding-left: 1rem;
@@ -62,7 +63,6 @@
       border: 0.1rem solid $brightGray;
     }
     &--description {
-      width: 50%;
       height: 5rem;
       margin: 2rem 0 4rem 0;
       padding-left: 1rem;
