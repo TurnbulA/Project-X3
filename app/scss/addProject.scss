@@ -70,13 +70,13 @@
       border: 0.1rem solid $brightGray;
     }
   }
-  &__colors {
+  &-colors {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
-    &--button {
+    &__button {
       width: 5rem;
       height: 5rem;
       border-radius: 1.5rem;

@@ -1,12 +1,11 @@
 const newProjectColours = [
-  ...document.querySelectorAll(".c-add-project__colors--button")
+  ...document.querySelectorAll(".c-add-project-colours__button")
 ];
 
 newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", () => {
     removeActiveColour();
     newProjectColour.classList.toggle("isActive");
-    return newProjectColour;
   });
 });
 const formSubmitted = document.querySelector(".c-add-project__form");
@@ -25,7 +24,7 @@ const removeActiveColour = () => {
 const projectValidation = () => {
   const titleInput = document.querySelector(".c-add-project__input--title");
   const projectColours = [
-    ...document.querySelectorAll(".c-add-project__colors--button")
+    ...document.querySelectorAll(".c-add-project-colours__button")
   ];
   const titleError = document.querySelector(".c-add-project__error--title");
   const colourError = document.querySelector(".c-add-project__error--colours");
