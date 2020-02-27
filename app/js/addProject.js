@@ -19,6 +19,15 @@ const removeActiveColour = () => {
   });
 };
 
+const removeErrorMessage = () => {
+  const errorMessages = [...document.querySelectorAll(".error")];
+  errorMessages.forEach(errorMessage => {
+    console.log(errorMessage);
+    errorMessage.classList.remove("error");
+    console.log(errorMessage);
+  });
+};
+
 const projectValidation = () => {
   const titleInput = document.querySelector(".c-add-project__input--title");
   const projectColours = [...document.querySelectorAll(".c-colours__button")];
@@ -43,11 +52,7 @@ const resetForm = () => {
   document
     .querySelector(".c-add-project__container")
     .classList.remove("c-add-project__container--active");
-  const errorMessages = [...document.querySelectorAll(".error")];
-  errorMessages.forEach(errorMessage => {
-    console.log(errorMessage);
-    errorMessage.classList.remove("error");
-    console.log(errorMessage);
-  });
+
   removeActiveColour();
+  removeErrorMessage();
 };
