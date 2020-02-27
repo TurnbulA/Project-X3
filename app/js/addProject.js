@@ -13,7 +13,6 @@ const formSubmitted = document.querySelector(".c-add-project__form");
 formSubmitted.addEventListener("submit", e => {
   projectValidation();
   e.preventDefault();
-  createObject();
 });
 
 const removeActiveColour = () => {
@@ -24,21 +23,24 @@ const removeActiveColour = () => {
 };
 
 const projectValidation = () => {
-  const titleValue = document.querySelector(".c-add-project__input--title");
-  const projectColours = [...document.querySelectorAll(".isActive")];
+  const titleInput = document.querySelector(".c-add-project__input--title");
+  const projectColours = [
+    ...document.querySelectorAll(".c-add-project__colors--button")
+  ];
+  const titleError = document.querySelector(".c-add-project__error--title");
+  const colourError = document.querySelector(".c-add-project__error--colours");
+  if (titleInput.value === "") {
+    titleError.classList.add("error");
+  }
 
   projectColours.forEach(projectColour => {
     if (projectColour.classList.contains("isActive")) {
-      return true;
+      createObject();
     } else {
-      alert("Select a colour");
-      return false;
+      colourError.classList.add("error");
+      return true;
     }
   });
-  if (titleValue.value === "") {
-    alert("Fill out name");
-    return false;
-  }
 };
 
 const resetForm = () => {
@@ -46,5 +48,11 @@ const resetForm = () => {
   document
     .querySelector(".c-add-project__container")
     .classList.remove("c-add-project__container--active");
+  const errorMessages = [...document.querySelectorAll(".error")];
+  errorMessages.forEach(errorMessage => {
+    console.log(errorMessage);
+    errorMessage.classList.remove("error");
+    console.log(errorMessage);
+  });
   removeActiveColour();
 };

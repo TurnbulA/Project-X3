@@ -18,12 +18,10 @@
   &__container {
     position: fixed;
     background-color: $blackSqueeze;
-
     left: 25%;
     right: 25%;
     width: 94.35rem;
     max-width: 94.35rem;
-    height: 50rem;
     z-index: 3;
     padding: 3rem;
     display: none;
@@ -58,7 +56,7 @@
     &--title {
       width: 50%;
       height: 5rem;
-      margin: 2rem 0 4rem 0;
+      margin: 2rem 0 2rem 0;
       padding-left: 1rem;
       border-radius: 1rem;
       border: 0.1rem solid $brightGray;
@@ -96,6 +94,22 @@
     cursor: pointer;
     &:hover {
       box-shadow: 0 0 2rem rgba(109, 109, 109, 0.75);
+    }
+  }
+  &__error {
+    &--title {
+      display: none;
+      color: red;
+      &.error {
+        display: block;
+      }
+    }
+    &--colours {
+      display: none;
+      color: red;
+      &.error {
+        display: block;
+      }
     }
   }
 }

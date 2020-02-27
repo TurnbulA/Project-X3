@@ -79,14 +79,14 @@ const createObject = () => {
     ".c-add-project__input--description"
   ).value;
   const projectID = projectName.replace(/\s+/g, "");
-  const myObject = {
+  const pushProject = {
     dataId: projectID,
     title: projectName,
     colour: projectColour,
     description: projectDescription,
     toDoList: []
   };
-  projects.push(myObject);
+  projects.push(pushProject);
   renderIcon();
   resetForm();
 };
