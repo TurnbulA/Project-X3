@@ -1,6 +1,4 @@
-const newProjectColours = [
-  ...document.querySelectorAll(".c-add-project-colours__button")
-];
+const newProjectColours = [...document.querySelectorAll(".c-colours__button")];
 
 newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", () => {
@@ -23,9 +21,7 @@ const removeActiveColour = () => {
 
 const projectValidation = () => {
   const titleInput = document.querySelector(".c-add-project__input--title");
-  const projectColours = [
-    ...document.querySelectorAll(".c-add-project-colours__button")
-  ];
+  const projectColours = [...document.querySelectorAll(".c-colours__button")];
   const titleError = document.querySelector(".c-add-project__error--title");
   const colourError = document.querySelector(".c-add-project__error--colours");
   if (titleInput.value === "") {
