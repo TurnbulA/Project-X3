@@ -9,7 +9,13 @@ document
 document
   .querySelector(".c-add-project__header--svg")
   .addEventListener("click", () => {
-    console.warn("hi");
-    removeError();
+    if (
+      document
+        .querySelector(".c-add-project__error--colours")
+        .classList.contains("error")
+    ) {
+      removeError();
+    }
+
     resetForm();
   });
