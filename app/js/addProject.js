@@ -1,17 +1,24 @@
 const newProjectColours = [...document.querySelectorAll(".c-colours__button")];
 
 newProjectColours.forEach(newProjectColour => {
-  newProjectColour.addEventListener("click", () => {
+  newProjectColour.addEventListener("click", e => {
     removeActiveColour();
-    newProjectColour.classList.toggle("isActive");
+    e.target.classList.toggle("isActive");
+    removeError();
   });
 });
-const formSubmitted = document.querySelector(".c-add-project__form");
-formSubmitted.addEventListener("submit", e => {
-  projectValidation();
-  e.preventDefault();
-});
 
+document.querySelector(".c-add-project__form").addEventListener("submit", e => {
+  e.preventDefault();
+  colourValidation();
+});
+const removeError = () => {
+  console.log("hi");
+  const activeErrorMessage = document.querySelector(".error");
+  console.log(activeErrorMessage);
+  activeErrorMessage.classList.remove("error");
+  console.log(activeErrorMessage);
+};
 const removeActiveColour = () => {
   const activeColours = [...document.querySelectorAll(".isActive")];
   activeColours.forEach(activeColour => {
@@ -19,40 +26,23 @@ const removeActiveColour = () => {
   });
 };
 
-const removeErrorMessage = () => {
-  const errorMessages = [...document.querySelectorAll(".error")];
-  errorMessages.forEach(errorMessage => {
-    console.log(errorMessage);
-    errorMessage.classList.remove("error");
-    console.log(errorMessage);
-  });
-};
-
-const projectValidation = () => {
-  const titleInput = document.querySelector(".c-add-project__input--title");
-  const projectColours = [...document.querySelectorAll(".c-colours__button")];
-  const titleError = document.querySelector(".c-add-project__error--title");
-  const colourError = document.querySelector(".c-add-project__error--colours");
-  if (titleInput.value === "") {
-    titleError.classList.add("error");
-  }
-
-  projectColours.forEach(projectColour => {
-    if (projectColour.classList.contains("isActive")) {
+const colourValidation = () => {
+  const selectedColours = [...document.querySelectorAll(".c-colours__button")];
+  const errorMessage = document.querySelector(".c-add-project__error--colours");
+  selectedColours.forEach(selectedColour => {
+    console.log(selectedColour);
+    if (selectedColour.classList.contains("isActive")) {
       createObject();
-    } else {
-      colourError.classList.add("error");
       return true;
+    } else {
+      errorMessage.classList.add("error");
     }
   });
 };
-
 const resetForm = () => {
   document.querySelector(".c-add-project__form").reset();
   document
     .querySelector(".c-add-project__container")
     .classList.remove("c-add-project__container--active");
-
   removeActiveColour();
-  removeErrorMessage();
 };

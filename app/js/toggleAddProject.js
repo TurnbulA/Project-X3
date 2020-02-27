@@ -9,5 +9,7 @@ document
 document
   .querySelector(".c-add-project__header--svg")
   .addEventListener("click", () => {
+    console.warn("hi");
     resetForm();
+    removeError();
   });
