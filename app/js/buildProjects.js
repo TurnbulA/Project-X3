@@ -1,6 +1,6 @@
-const projects = {
-  greenHouse: {
-    dataId: "greenHouse",
+let projects = [
+  {
+    dataId: "GreenHouse",
     title: "Green House",
     colour: "pink",
     description:
@@ -18,8 +18,8 @@ const projects = {
       }
     ]
   },
-  cyberPunk: {
-    dataId: "cyberPunk",
+  {
+    dataId: "CyberPunk",
     title: "Cyber Punk",
     colour: "green",
     description:
@@ -37,7 +37,7 @@ const projects = {
       }
     ]
   }
-};
+];
 
 const getTitleInitials = title => {
   const projectInitials = title.split(" ");
@@ -51,8 +51,7 @@ const getTitleInitials = title => {
   return words;
 };
 
-const list = document.querySelector(".c-projects__list");
-let boxes;
+const projectIconList = document.querySelector(".c-projects__list");
 const renderIcon = () => {
   const projectIcons = Object.values(projects)
     .map((item, index) => {
@@ -61,11 +60,33 @@ const renderIcon = () => {
             <div class="c-projects--icon u-gradient-bg--${item.colour}">
               <h1 class="c-projects--initals">${words}</h1>
             </div>
-            <h2>${item.title}<h2>
+            <h2>${item.title}</h2>
         </li>`;
     })
     .join("");
-  list.innerHTML = projectIcons;
+  projectIconList.innerHTML = projectIcons;
   return projectIcons;
 };
 renderIcon();
+
+const createObject = () => {
+  const projectName = document.querySelector(".c-add-project__input--title")
+    .value;
+  const projectColour = document
+    .querySelector(".isActive")
+    .getAttribute("data-colour");
+  const projectDescription = document.querySelector(
+    ".c-add-project__input--description"
+  ).value;
+  const projectID = projectName.replace(/\s+/g, "");
+  const myObject = {
+    dataId: projectID,
+    title: projectName,
+    colour: projectColour,
+    description: projectDescription,
+    toDoList: []
+  };
+  projects.push(myObject);
+  renderIcon();
+  resetForm();
+};
