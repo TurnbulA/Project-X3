@@ -13,11 +13,9 @@ document.querySelector(".c-add-project__form").addEventListener("submit", e => {
   colourValidation();
 });
 const removeError = () => {
-  console.log("hi");
   const activeErrorMessage = document.querySelector(".error");
-  console.log(activeErrorMessage);
+
   activeErrorMessage.classList.remove("error");
-  console.log(activeErrorMessage);
 };
 const removeActiveColour = () => {
   const activeColours = [...document.querySelectorAll(".isActive")];
@@ -30,7 +28,6 @@ const colourValidation = () => {
   const selectedColours = [...document.querySelectorAll(".c-colours__button")];
   const errorMessage = document.querySelector(".c-add-project__error--colours");
   selectedColours.forEach(selectedColour => {
-    console.log(selectedColour);
     if (selectedColour.classList.contains("isActive")) {
       createObject();
       return true;
