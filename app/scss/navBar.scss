@@ -5,6 +5,11 @@
   position: fixed;
   color: $stormGray;
   font-size: 2.5rem;
+  border-radius: 3rem;
+  height: 7.4rem;
+  &:hover {
+    box-shadow: 0 0 1.5rem rgba(252, 254, 254, 0.75);
+  }
   &__list {
     position: fixed;
     left: 0;
