@@ -4,7 +4,13 @@ newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", e => {
     removeActiveColour();
     e.target.classList.toggle("isActive");
-    removeError();
+    if (
+      document
+        .querySelector(".c-add-project__error--colours")
+        .classList.contains("error")
+    ) {
+      removeError();
+    }
   });
 });
 
