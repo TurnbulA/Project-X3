@@ -4,30 +4,36 @@ newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", e => {
     removeActiveColour();
     e.target.classList.toggle("isActive");
-    if (
-      document
-        .querySelector(".c-add-project__error--colours")
-        .classList.contains("error")
-    ) {
-      removeError();
-    }
+    errorCheck();
   });
 });
 
 document.querySelector(".c-add-project__form").addEventListener("submit", e => {
   e.preventDefault();
   colourValidation();
+  errorCheck();
 });
+
 const removeError = () => {
   const activeErrorMessage = document.querySelector(".error");
-
   activeErrorMessage.classList.remove("error");
 };
+
 const removeActiveColour = () => {
   const activeColours = [...document.querySelectorAll(".isActive")];
   activeColours.forEach(activeColour => {
     activeColour.classList.remove("isActive");
   });
+};
+
+const errorCheck = () => {
+  if (
+    document
+      .querySelector(".c-add-project__error--colours")
+      .classList.contains("error")
+  ) {
+    removeError();
+  }
 };
 
 const colourValidation = () => {
@@ -48,4 +54,5 @@ const resetForm = () => {
     .querySelector(".c-add-project__container")
     .classList.remove("c-add-project__container--active");
   removeActiveColour();
+  errorCheck();
 };
