@@ -1,5 +1,12 @@
 const newProjectColours = [...document.querySelectorAll(".c-colours__button")];
 
+const errorCheck = () => {
+  const activeError = document.querySelector(".c-add-project__error--colours");
+  if (activeError.classList.contains("error")) {
+    removeError();
+  }
+};
+
 newProjectColours.forEach(newProjectColour => {
   newProjectColour.addEventListener("click", e => {
     removeActiveColour();
@@ -24,16 +31,6 @@ const removeActiveColour = () => {
   activeColours.forEach(activeColour => {
     activeColour.classList.remove("isActive");
   });
-};
-
-const errorCheck = () => {
-  if (
-    document
-      .querySelector(".c-add-project__error--colours")
-      .classList.contains("error")
-  ) {
-    removeError();
-  }
 };
 
 const colourValidation = () => {
