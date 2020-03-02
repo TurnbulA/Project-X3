@@ -1,5 +1,5 @@
-let projects = [
-  {
+const projects = {
+  GreenHouse: {
     dataId: "GreenHouse",
     title: "Green House",
     colour: "pink",
@@ -18,7 +18,7 @@ let projects = [
       }
     ]
   },
-  {
+  CyberPunk: {
     dataId: "CyberPunk",
     title: "Cyber Punk",
     colour: "green",
@@ -26,18 +26,18 @@ let projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque, ratione quidem tenetur nesciunt perspiciatis deserunt iusto obcaecati fugit soluta quisquam aperiam rem! Tempore, ut veniam vel temporibus maiores voluptas?",
     toDoList: [
       {
-        title: "item 1",
+        title: "item 3",
         completed: false,
         status: "waiting"
       },
       {
-        title: "item 2",
+        title: "item 4",
         completed: false,
         status: "waiting"
       }
     ]
   }
-];
+};
 
 const getTitleInitials = title => {
   const projectInitials = title.split(" ");
@@ -54,11 +54,11 @@ const getTitleInitials = title => {
 const projectIconList = document.querySelector(".c-projects__list");
 const renderIcon = () => {
   const projectIcons = Object.values(projects)
-    .map((item, index) => {
+    .map(item => {
       const words = getTitleInitials(item.title);
       return `<li class="c-projects__list--item" data-id=${item.dataId}>
-            <div class="c-projects--icon u-gradient-bg--${item.colour}">
-              <h1 class="c-projects--initals">${words}</h1>
+            <div class="c-projects--icon u-gradient-bg--${item.colour}" data-id=${item.dataId}>
+              <h1 class="c-projects--initals" data-id=${item.dataId}>${words}</h1>
             </div>
             <h2>${item.title}</h2>
         </li>`;
@@ -78,15 +78,22 @@ const createObject = () => {
   const projectDescription = document.querySelector(
     ".c-add-project__input--description"
   ).value;
-  const projectID = projectName.replace(/\s+/g, "");
-  const pushProject = {
-    dataId: projectID,
+  const projectId = projectName.replace(/\s+/g, "");
+  const newProject = () => ({
+    dataId: projectId,
     title: projectName,
     colour: projectColour,
     description: projectDescription,
-    toDoList: []
-  };
-  projects.push(pushProject);
+    toDoList: [
+      {
+        title: "",
+        complete: false,
+        status: "waiting"
+      }
+    ]
+  });
+  projects[projectId] = newProject();
   renderIcon();
   resetForm();
+  createList();
 };

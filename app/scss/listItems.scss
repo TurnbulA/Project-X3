@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.c-projects-to-do {
+  &__header {
+    &--description {
+      color: $stormGray;
+    }
+  }
+  &__list {
+    &--item {
+      color: $stormGray;
+    }
+  }
+}
