@@ -79,7 +79,7 @@ const createObject = () => {
     ".c-add-project__input--description"
   ).value;
   const projectId = projectName.replace(/\s+/g, "");
-  const newProject = projectDetails => ({
+  const newProject = () => ({
     dataId: projectId,
     title: projectName,
     colour: projectColour,
@@ -92,7 +92,7 @@ const createObject = () => {
       }
     ]
   });
-  projects[projectDetails.title] = newProject(projectDetails);
+  projects[projectId] = newProject();
   console.log(newProject(projectId));
   renderIcon();
   resetForm();
