@@ -7,7 +7,9 @@ const renderToDoList = projectName => {
   const projectToDos = projects[projectName].toDoList
     .map(item => {
       return `
-      <li>${item.title} ${item.status}</li>
+      <li>
+        ${item.title} ${item.status}
+      </li>
       `;
     })
     .join("");
