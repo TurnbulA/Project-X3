@@ -93,7 +93,6 @@ const createObject = () => {
     ]
   });
   projects[projectId] = newProject();
-  console.log(newProject(projectId));
   renderIcon();
   resetForm();
   createList();
