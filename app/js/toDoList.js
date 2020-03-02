@@ -8,8 +8,7 @@ const renderToDoList = projectName => {
     .map(item => {
       return `
       <li>${item.title} ${item.status}</li>
-     
-            `;
+      `;
     })
     .join("");
   projectToDoList.innerHTML = projectToDos;

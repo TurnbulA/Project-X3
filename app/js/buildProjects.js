@@ -54,7 +54,7 @@ const getTitleInitials = title => {
 const projectIconList = document.querySelector(".c-projects__list");
 const renderIcon = () => {
   const projectIcons = Object.values(projects)
-    .map((item, index) => {
+    .map(item => {
       const words = getTitleInitials(item.title);
       return `<li class="c-projects__list--item" data-id=${item.dataId}>
             <div class="c-projects--icon u-gradient-bg--${item.colour}" data-id=${item.dataId}>
@@ -79,7 +79,7 @@ const createObject = () => {
     ".c-add-project__input--description"
   ).value;
   const projectId = projectName.replace(/\s+/g, "");
-  projects.projectId = {
+  const newProject = projectDetails => ({
     dataId: projectId,
     title: projectName,
     colour: projectColour,
@@ -88,10 +88,12 @@ const createObject = () => {
       {
         title: "",
         complete: false,
-        status: "wating"
+        status: "waiting"
       }
     ]
-  };
+  });
+  projects[projectDetails.title] = newProject(projectDetails);
+  console.log(newProject(projectId));
   renderIcon();
   resetForm();
   createList();
