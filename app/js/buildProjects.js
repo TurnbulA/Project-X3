@@ -96,5 +96,5 @@ const createObject = () => {
   renderIcon();
   resetForm();
   createList();
-  projectToggle();
+  toggleProject();
 };

@@ -1,4 +1,4 @@
-const projectToggle = () => {
+const toggleProject = () => {
   const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
@@ -9,12 +9,12 @@ const projectToggle = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
-      projectOff();
+      closeProject();
     });
   });
 };
 
-const projectOff = () => {
+const closeProject = () => {
   const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
   projectButtons.forEach(projectButton => {
     const projectIconBody = document.querySelector(
@@ -33,8 +33,8 @@ const projectOff = () => {
         projectIconBody.classList.add("activeProject");
         projectToDo.classList.add("activeList");
       }
-      projectToggle();
+      toggleProject();
     });
   });
 };
-projectToggle();
+toggleProject();
