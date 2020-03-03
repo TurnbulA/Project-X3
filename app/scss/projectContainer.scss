@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+.c-container--project {
+  &-body {
+    position: absolute;
+    top: 5rem;
+    left: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: 10rem auto 0 auto;
+    transition: all 300ms ease-in-out;
+    &.activeProject {
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      transform: translateX(35%);
+      display: flex;
+      justify-content: left;
+    }
+  }
+  &-list {
+    width: 50%;
+    height: 100%;
+    background-color: $blackSqueeze;
+    padding: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    transform: translateX(110%);
+    transition: all 300ms ease-in-out;
+    border-radius: 2rem;
+    &.activeList {
+      top: 1rem;
+      right: 2rem;
+      transform: translateX(0);
+    }
+  }
+}

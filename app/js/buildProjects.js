@@ -88,7 +88,7 @@ const createObject = () => {
       {
         title: "",
         complete: false,
-        status: "waiting"
+        status: ""
       }
     ]
   });
@@ -96,4 +96,5 @@ const createObject = () => {
   renderIcon();
   resetForm();
   createList();
+  toggleProject();
 };

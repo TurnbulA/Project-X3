@@ -58,154 +58,158 @@
     </div>
 
     <div class="c-container">
-      <div class="c-header">
-        <h1 class="c-header--title">Welcome Back</h1>
-        <p class="c-header--para">We Have Missed You</p>
-        <div class="c-search-bar">
-          <button type="submit" class="c-search-bar__button">
+      <div class="c-container--project-body">
+        <div class="c-header">
+          <h1 class="c-header--title">Welcome Back</h1>
+          <p class="c-header--para">We Have Missed You</p>
+          <div class="c-search-bar">
+            <button type="submit" class="c-search-bar__button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="9.89"
+                height="10.312"
+                viewBox="0 0 9.89 10.312"
+                class="c-search-bar__button--svg"
+              >
+                <g transform="translate(-968 -412)">
+                  <g
+                    transform="translate(968 412)"
+                    fill="none"
+                    stroke="#fcfefe"
+                    stroke-width="1"
+                  >
+                    <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
+                    <circle cx="4.5" cy="4.5" r="4" fill="none" />
+                  </g>
+                  <line
+                    x1="2"
+                    y1="2.5"
+                    transform="translate(975.5 419.5)"
+                    fill="none"
+                    stroke="#fcfefe"
+                    stroke-width="1"
+                  />
+                </g>
+              </svg>
+            </button>
+            <input
+              class="c-search-bar__input"
+              type="text"
+              placeholder="Search Task or Project..."
+            />
+          </div>
+        </div>
+
+        <div class="c-projects">
+          <h1>Projects</h1>
+          <ul class="c-projects__list"></ul>
+        </div>
+
+        <div class="c-add-project">
+          <div class="c-add-project__button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="9.89"
-              height="10.312"
-              viewBox="0 0 9.89 10.312"
-              class="c-search-bar__button--svg"
+              width="43"
+              height="44"
+              viewBox="0 0 43 44"
             >
-              <g transform="translate(-968 -412)">
-                <g
-                  transform="translate(968 412)"
-                  fill="none"
-                  stroke="#fcfefe"
-                  stroke-width="1"
-                >
-                  <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
-                  <circle cx="4.5" cy="4.5" r="4" fill="none" />
-                </g>
-                <line
-                  x1="2"
-                  y1="2.5"
-                  transform="translate(975.5 419.5)"
-                  fill="none"
-                  stroke="#fcfefe"
-                  stroke-width="1"
+              <g transform="translate(-1714 -820)">
+                <rect
+                  width="43"
+                  height="44"
+                  rx="14"
+                  transform="translate(1714 820)"
+                  fill="#9769c7"
                 />
+                <g transform="translate(-70 -6.5)">
+                  <line
+                    x2="11"
+                    transform="translate(1800 849)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    y2="11"
+                    transform="translate(1805.5 843.5)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                  />
+                </g>
               </g>
             </svg>
-          </button>
-          <input
-            class="c-search-bar__input"
-            type="text"
-            placeholder="Search Task or Project..."
-          />
+          </div>
         </div>
-      </div>
-
-      <div class="c-projects">
-        <h1>Projects</h1>
-        <ul class="c-projects__list"></ul>
-      </div>
-
-      <div class="c-add-project">
-        <div class="c-add-project__button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="43"
-            height="44"
-            viewBox="0 0 43 44"
-          >
-            <g transform="translate(-1714 -820)">
-              <rect
-                width="43"
-                height="44"
-                rx="14"
-                transform="translate(1714 820)"
-                fill="#9769c7"
+        <div class="c-add-project__container">
+          <div class="c-add-project__header">
+            <h1 class="c-add-project__header--text">Create Project</h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              class="c-add-project__header--svg"
+            >
+              <path
+                id="Close"
+                d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
+                transform="translate(0 -0.135)"
               />
-              <g transform="translate(-70 -6.5)">
-                <line
-                  x2="11"
-                  transform="translate(1800 849)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="1.5"
-                />
-                <line
-                  y2="11"
-                  transform="translate(1805.5 843.5)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="1.5"
-                />
-              </g>
-            </g>
-          </svg>
+            </svg>
+          </div>
+          <div class="c-add-project__body">
+            <form class="c-add-project__form">
+              <input
+                class="c-add-project__input--title"
+                type="text"
+                placeholder="Enter project name here"
+                required
+              />
+              <p class="c-add-project__error--title">Enter a project title</p>
+              <h1 class="c-add-project__header--text">Select a colour</h1>
+              <div class="c-colours" required>
+                <div
+                  class="c-colours__button u-gradient-bg--pink"
+                  data-colour="pink"
+                ></div>
+                <div
+                  class="c-colours__button u-gradient-bg--green"
+                  data-colour="green"
+                ></div>
+                <div
+                  class="c-colours__button u-gradient-bg--blue"
+                  data-colour="blue"
+                ></div>
+                <div
+                  class="c-colours__button u-gradient-bg--purple"
+                  data-colour="purple"
+                ></div>
+                <div
+                  class="c-colours__button u-gradient-bg--orange"
+                  data-colour="orange"
+                ></div>
+              </div>
+              <p class="c-add-project__error--colours">Select a colour</p>
+              <h1 class="c-add-project__header--text">Project description</h1>
+              <input
+                class="c-add-project__input--description"
+                type="text"
+                placeholder="Enter project description here"
+                required
+              />
+              <button class="c-add-project__submit" type="submit">
+                Submit Project
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="c-add-project__container">
-        <div class="c-add-project__header">
-          <h1 class="c-add-project__header--text">Create Project</h1>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            class="c-add-project__header--svg"
-          >
-            <path
-              id="Close"
-              d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
-              transform="translate(0 -0.135)"
-            />
-          </svg>
+      <div class="c-container--project-list">
+        <div class="c-projects-to-do">
+          <div class="c-projects-to-do__header"></div>
+          <ul class="c-projects-to-do__list"></ul>
         </div>
-        <div class="c-add-project__body">
-          <form class="c-add-project__form">
-            <input
-              class="c-add-project__input--title"
-              type="text"
-              placeholder="Enter project name here"
-              required
-            />
-            <p class="c-add-project__error--title">Enter a project title</p>
-            <h1 class="c-add-project__header--text">Select a colour</h1>
-            <div class="c-colours" required>
-              <div
-                class="c-colours__button u-gradient-bg--pink"
-                data-colour="pink"
-              ></div>
-              <div
-                class="c-colours__button u-gradient-bg--green"
-                data-colour="green"
-              ></div>
-              <div
-                class="c-colours__button u-gradient-bg--blue"
-                data-colour="blue"
-              ></div>
-              <div
-                class="c-colours__button u-gradient-bg--purple"
-                data-colour="purple"
-              ></div>
-              <div
-                class="c-colours__button u-gradient-bg--orange"
-                data-colour="orange"
-              ></div>
-            </div>
-            <p class="c-add-project__error--colours">Select a colour</p>
-            <h1 class="c-add-project__header--text">Project description</h1>
-            <input
-              class="c-add-project__input--description"
-              type="text"
-              placeholder="Enter project description here"
-              required
-            />
-            <button class="c-add-project__submit" type="submit">
-              Submit Project
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="c-projects-to-do">
-        <div class="c-projects-to-do__header"></div>
-        <ul class="c-projects-to-do__list"></ul>
       </div>
     </div>
   </body>
