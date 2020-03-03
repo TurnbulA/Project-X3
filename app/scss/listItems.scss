@@ -2,6 +2,9 @@
 
 .c-projects-to-do {
   &__header {
+    &--title {
+      color: $ebonyClay;
+    }
     &--description {
       color: $stormGray;
     }
@@ -11,4 +14,55 @@
       color: $stormGray;
     }
   }
+}
+.c-projects-to-do__list {
+  padding: 0;
+}
+
+.c-list-item {
+  &__input {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 0.25rem solid $ebonyClay;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    & input {
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+      &:checked ~ .c-list-item__input--custom {
+        background: #36d7b7;
+      }
+    }
+    & .c-list-item__input--custom {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 5rem;
+      padding: auto;
+      background-color: transparent;
+      border-radius: 100rem;
+      border: 0.2rem solid #36d7b7;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      &::after {
+        position: relative;
+        content: "";
+        border: solid #36d7b7;
+        border-width: 0;
+      }
+    }
+  }
+  &__text {
+    margin-left: 5rem;
+  }
+}
+
+.c-svg__check {
+  fill: $blackSqueeze;
 }
