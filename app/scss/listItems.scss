@@ -2,6 +2,11 @@
 
 .c-projects-to-do {
   &__header {
+    display: flex;
+    flex-direction: row;
+    &--close {
+      cursor: pointer;
+    }
     &--title {
       color: $ebonyClay;
     }
@@ -10,31 +15,63 @@
     }
   }
   &__list {
+    padding: 0;
     &--item {
       color: $stormGray;
     }
   }
-}
-.c-projects-to-do__list {
-  padding: 0;
+  &__add-project {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &--svg {
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 1.5rem rgba(39, 39, 39, 0.5);
+        border-radius: 1.5rem;
+      }
+    }
+  }
 }
 
 .c-list-item {
+  &__text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    &--status {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      padding: 1rem 4rem;
+      border-radius: 2rem;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+      &.waiting {
+        color: $manatee;
+        background-color: $athensGray;
+      }
+      &.Inreview {
+        color: $orange2;
+      }
+    }
+  }
   &__input {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
-    border: 0.25rem solid $ebonyClay;
     margin-bottom: 1rem;
-    border-radius: 3rem;
     & input {
       position: relative;
       opacity: 0;
       cursor: pointer;
       &:checked ~ .c-list-item__input--custom {
         background: #36d7b7;
+        border: solid #36d7b7;
       }
     }
     & .c-list-item__input--custom {
@@ -42,12 +79,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 5rem;
+      height: 4.5rem;
       width: 5rem;
       padding: auto;
       background-color: transparent;
       border-radius: 100rem;
-      border: 0.2rem solid #36d7b7;
+      border: 0.2rem solid $manatee;
       cursor: pointer;
       transition: all 200ms ease-in-out;
       &::after {

@@ -10,6 +10,7 @@ const toggleProject = () => {
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
       closeProject();
+      closeProjectCross();
     });
   });
 };
@@ -38,3 +39,18 @@ const closeProject = () => {
   });
 };
 toggleProject();
+
+const closeProjectCross = () => {
+  document
+    .querySelector(".c-projects-to-do__header--close")
+    .addEventListener("click", () => {
+      const projectIconBody = document.querySelector(
+        ".c-container--project-body"
+      );
+      const projectToDo = document.querySelector(".c-container--project-list");
+
+      projectIconBody.classList.remove("activeProject");
+      projectToDo.classList.remove("activeList");
+      toggleProject();
+    });
+};

@@ -1,4 +1,6 @@
-const projectToDoHeader = document.querySelector(".c-projects-to-do__header");
+const projectToDoHeader = document.querySelector(
+  ".c-projects-to-do__header--text-content"
+);
 const projectToDoList = document.querySelector(".c-projects-to-do__list");
 
 const renderToDoList = projectName => {
@@ -17,7 +19,7 @@ const renderToDoList = projectName => {
           </span>
           <div class="c-list-item__text">              
             <p class="c-list-item__text--title">${item.title}</p>
-            <p class="c-list-item__text--status">${item.status}</p>
+            <p class="c-list-item__text--status ${item.statusId}">${item.status}</p>
           </div>     
         </label>  
       </li>

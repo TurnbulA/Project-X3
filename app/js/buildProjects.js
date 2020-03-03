@@ -9,12 +9,14 @@ const projects = {
       {
         title: "item 1",
         completed: false,
-        status: "waiting"
+        status: "waiting",
+        statusId: "waiting"
       },
       {
         title: "item 2",
         completed: false,
-        status: "waiting"
+        status: "waiting",
+        statusId: "waiting"
       }
     ]
   },
@@ -28,12 +30,14 @@ const projects = {
       {
         title: "item 3",
         completed: false,
-        status: "waiting"
+        status: "waiting",
+        statusId: "waiting"
       },
       {
         title: "item 4",
         completed: false,
-        status: "waiting"
+        status: "waiting",
+        statusId: "waiting"
       }
     ]
   }
@@ -88,7 +92,8 @@ const createObject = () => {
       {
         title: "",
         complete: false,
-        status: ""
+        status: "",
+        statusId: ""
       }
     ]
   });
