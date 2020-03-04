@@ -9,7 +9,7 @@ const openProject = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
-      checkProjects();
+      isIconActive();
     });
   });
 };
@@ -34,7 +34,7 @@ document
     closeProject();
   });
 
-const checkProjects = () => {
+const isIconActive = () => {
   const activeProjects = [...document.querySelectorAll(".project-Icon")];
   activeProjects.forEach(activeProject => {
     activeProject.addEventListener("click", () => {
