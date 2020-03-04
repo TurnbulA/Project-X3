@@ -1,4 +1,4 @@
-const toggleProject = () => {
+const openProject = () => {
   const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
@@ -9,32 +9,38 @@ const toggleProject = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
-      closeProject();
+      isIconActive();
     });
   });
 };
 
 const closeProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
-  projectButtons.forEach(projectButton => {
-    const projectIconBody = document.querySelector(
-      ".c-container--project-body"
-    );
-    const projectToDo = document.querySelector(".c-container--project-list");
-    const activeProject = document.querySelector(".iconActive");
-    projectButton.addEventListener("click", e => {
-      if (e.target.classList.contains("iconActive")) {
-        e.target.classList.remove("iconActive");
-        activeProject.classList.remove("iconActive");
-        projectIconBody.classList.remove("activeProject");
-        projectToDo.classList.remove("activeList");
-      } else {
-        e.target.classList.add("iconActive");
-        projectIconBody.classList.add("activeProject");
-        projectToDo.classList.add("activeList");
+  const projectIconBody = document.querySelector(".c-container--project-body");
+  const projectToDo = document.querySelector(".c-container--project-list");
+  const activeProjects = [...document.querySelectorAll(".iconActive")];
+  projectIconBody.classList.remove("activeProject");
+  projectToDo.classList.remove("activeList");
+  activeProjects.forEach(activeProject => {
+    activeProject.classList.remove("iconActive");
+  });
+
+  openProject();
+};
+openProject();
+
+document
+  .querySelector(".c-projects-to-do__close--cross")
+  .addEventListener("click", () => {
+    closeProject();
+  });
+
+const isIconActive = () => {
+  const activeProjects = [...document.querySelectorAll(".project-Icon")];
+  activeProjects.forEach(activeProject => {
+    activeProject.addEventListener("click", () => {
+      if (activeProject.classList.contains("iconActive")) {
+        closeProject();
       }
-      toggleProject();
     });
   });
 };
-toggleProject();
