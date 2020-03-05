@@ -20,7 +20,7 @@
       color: $stormGray;
     }
   }
-  &__add-project {
+  &__list-item {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -35,6 +35,9 @@
 }
 
 .c-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   &__text {
     display: flex;
     flex-direction: row;
@@ -42,19 +45,29 @@
     justify-content: space-between;
     &--status {
       margin: 0;
-      display: flex;
-      align-items: center;
-      padding: 1rem 4rem;
+      height: fit-content;
+      width: fit-content;
+      padding: 1rem 2rem;
       border-radius: 2rem;
-      &::first-letter {
-        text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 1.5rem rgba(39, 39, 39, 0.5);
       }
       &.waiting {
-        color: $manatee;
-        background-color: $athensGray;
+        color: $waitingText;
+        background-color: $waitingContainer;
       }
-      &.Inreview {
-        color: $orange2;
+      &.inreview {
+        color: $inReview;
+        background-color: $inReviewText;
+      }
+      &.approved {
+        color: $approvedText;
+        background-color: $approvedContainer;
+      }
+      &.inprogress {
+        color: $inProgressText;
+        background-color: $inProgress;
       }
     }
   }

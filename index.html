@@ -141,69 +141,6 @@
             </svg>
           </div>
         </div>
-        <div class="c-add-project__container">
-          <div class="c-add-project__header">
-            <h1 class="c-add-project__header--text">Create Project</h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              class="c-add-project__header--svg"
-            >
-              <path
-                id="Close"
-                d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
-                transform="translate(0 -0.135)"
-              />
-            </svg>
-          </div>
-          <div class="c-add-project__body">
-            <form class="c-add-project__form">
-              <input
-                class="c-add-project__input--title"
-                type="text"
-                placeholder="Enter project name here"
-                required
-              />
-              <p class="c-add-project__error--title">Enter a project title</p>
-              <h1 class="c-add-project__header--text">Select a colour</h1>
-              <div class="c-colours" required>
-                <div
-                  class="c-colours__button u-gradient-bg--pink"
-                  data-colour="pink"
-                ></div>
-                <div
-                  class="c-colours__button u-gradient-bg--green"
-                  data-colour="green"
-                ></div>
-                <div
-                  class="c-colours__button u-gradient-bg--blue"
-                  data-colour="blue"
-                ></div>
-                <div
-                  class="c-colours__button u-gradient-bg--purple"
-                  data-colour="purple"
-                ></div>
-                <div
-                  class="c-colours__button u-gradient-bg--orange"
-                  data-colour="orange"
-                ></div>
-              </div>
-              <p class="c-add-project__error--colours">Select a colour</p>
-              <h1 class="c-add-project__header--text">Project description</h1>
-              <input
-                class="c-add-project__input--description"
-                type="text"
-                placeholder="Enter project description here"
-                required
-              />
-              <button class="c-add-project__submit" type="submit">
-                Submit Project
-              </button>
-            </form>
-          </div>
-        </div>
       </div>
       <div class="c-container--project-list">
         <div class="c-projects-to-do">
@@ -226,13 +163,13 @@
             </div>
           </div>
           <ul class="c-projects-to-do__list"></ul>
-          <div class="c-projects-to-do__add-project">
+          <div class="c-projects-to-do__list-item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="43"
               height="44"
               viewBox="0 0 43 44"
-              class="c-projects-to-do__add-project--svg"
+              class="c-projects-to-do__list-item--svg"
             >
               <g transform="translate(-1714 -820)">
                 <rect
@@ -261,6 +198,104 @@
               </g>
             </svg>
           </div>
+        </div>
+      </div>
+      <div class="c-add-project__container">
+        <div class="c-add-project__header">
+          <h1 class="c-add-project__header--text">Create Project</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            class="c-add-project__header--svg"
+          >
+            <path
+              id="Close"
+              d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
+              transform="translate(0 -0.135)"
+            />
+          </svg>
+        </div>
+        <div class="c-add-project__body">
+          <form class="c-add-project__form">
+            <input
+              class="c-add-project__input--title"
+              type="text"
+              placeholder="Enter project name here"
+              required
+            />
+            <p class="c-add-project__error--title">Enter a project title</p>
+            <h1 class="c-add-project__header--text">Select a colour</h1>
+            <div class="c-colours" required>
+              <div
+                class="c-colours__button u-gradient-bg--pink"
+                data-colour="pink"
+              ></div>
+              <div
+                class="c-colours__button u-gradient-bg--green"
+                data-colour="green"
+              ></div>
+              <div
+                class="c-colours__button u-gradient-bg--blue"
+                data-colour="blue"
+              ></div>
+              <div
+                class="c-colours__button u-gradient-bg--purple"
+                data-colour="purple"
+              ></div>
+              <div
+                class="c-colours__button u-gradient-bg--orange"
+                data-colour="orange"
+              ></div>
+            </div>
+            <p class="c-add-project__error--colours">Select a colour</p>
+            <h1 class="c-add-project__header--text">Project description</h1>
+            <input
+              class="c-add-project__input--description"
+              type="text"
+              placeholder="Enter project description here"
+              required
+            />
+            <button class="c-add-project__submit" type="submit">
+              Submit Project
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="c-projects__add-list-item">
+        <div class="c-projects__add-list-item--header">
+          <h1 class="c-projects__add-list-item--header--text">
+            Create a project item
+          </h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            class="c-projects__add-list-item--header--svg"
+          >
+            <path
+              id="Close"
+              d="M17.183,15.156,29.513,2.88a1.487,1.487,0,0,0,0-2.118,1.519,1.519,0,0,0-2.137,0L15.057,13.027,2.624.579A1.514,1.514,0,0,0,.487,2.724L12.911,15.163.442,27.577a1.49,1.49,0,0,0,0,2.118,1.519,1.519,0,0,0,2.137,0l12.458-12.4,12.383,12.4a1.514,1.514,0,1,0,2.137-2.145Z"
+              transform="translate(0 -0.135)"
+            />
+          </svg>
+        </div>
+        <div class="c-projects__add-list-item--form">
+          <form>
+            <input
+              class="c-projects__add-list-item--input"
+              placeholder="Enter task"
+            />
+            <select class="c-projects__add-list-item--options">
+              <option value="waiting">Waiting</option>
+              <option value="inProgress">In Progress</option>
+            </select>
+            <button type="submit" class="c-projects__add-list-item--button">
+              Submit Task
+            </button>
+          </form>
         </div>
       </div>
     </div>

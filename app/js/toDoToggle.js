@@ -40,6 +40,12 @@ const isIconActive = () => {
     activeProject.addEventListener("click", () => {
       if (activeProject.classList.contains("iconActive")) {
         closeProject();
+        const activeAddListItem = document.querySelector(
+          ".c-projects__add-list-item"
+        );
+        if (activeAddListItem.classList.contains("addItemActive")) {
+          closeAddListItem();
+        }
       }
     });
   });

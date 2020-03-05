@@ -19,9 +19,10 @@ const renderToDoList = projectName => {
           </span>
           <div class="c-list-item__text">              
             <p class="c-list-item__text--title">${item.title}</p>
-            <p class="c-list-item__text--status ${item.statusId}">${item.status}</p>
+            
           </div>     
         </label>  
+        <p class="c-list-item__text--status ${item.statusId}">${item.status}</p>
       </li>
       `;
     })

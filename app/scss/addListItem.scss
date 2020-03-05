@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.c-projects {
+  &__add-list-item {
+    position: relative;
+    margin: 10rem auto 0 auto;
+    display: none;
+    width: 50%;
+    z-index: 2;
+    background-color: $white;
+    box-shadow: 0 0 1.5rem rgba(60, 60, 60, 0.5);
+    padding: 2rem;
+    border-radius: 2rem;
+    &.addItemActive {
+      display: block;
+    }
+    &--header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &--text {
+        color: $ebonyClay;
+      }
+      &--svg {
+        cursor: pointer;
+        fill: red;
+      }
+    }
+
+    &--input {
+      width: 75%;
+      height: 5rem;
+      font-size: 2rem;
+      padding-left: 1rem;
+      border-radius: 1rem;
+      border: 0.1rem solid $ebonyClay;
+      &::placeholder {
+        font-size: 2rem;
+      }
+    }
+    &--options {
+      width: 50%;
+      padding: 2rem;
+      margin: 3rem 0;
+      font-size: 2rem;
+      border-radius: 2rem;
+      border: 0.1rem solid $ebonyClay;
+    }
+    &--button {
+      width: fit-content;
+      padding: 1rem 5rem;
+      border-radius: 1rem;
+      border: 0.1rem solid $ebonyClay;
+      background-color: $ebonyClay;
+      cursor: pointer;
+      color: $blackSqueeze;
+      font-size: 2rem;
+      &:hover {
+        box-shadow: 0 0 1.5rem rgba(60, 60, 60, 0.5);
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
