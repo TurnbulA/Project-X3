@@ -23,7 +23,6 @@ const closeProject = () => {
   activeProjects.forEach(activeProject => {
     activeProject.classList.remove("iconActive");
   });
-
   openProject();
 };
 openProject();

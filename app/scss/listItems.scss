@@ -41,7 +41,7 @@
   &__text {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
     justify-content: space-between;
     &--status {
       margin: 0;
@@ -57,7 +57,7 @@
         color: $waitingText;
         background-color: $waitingContainer;
       }
-      &.inreview {
+      &.in-review {
         color: $inReview;
         background-color: $inReviewText;
       }
@@ -65,7 +65,7 @@
         color: $approvedText;
         background-color: $approvedContainer;
       }
-      &.inprogress {
+      &.in-progress {
         color: $inProgressText;
         background-color: $inProgress;
       }
