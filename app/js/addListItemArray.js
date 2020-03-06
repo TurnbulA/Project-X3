@@ -5,7 +5,7 @@ const locateProject = projectName => {
   submitItem();
 };
 
-const appendItem = () => {
+const appendItem = e => {
   const inputValue = document.querySelector(".c-projects__add-list-item--input")
     .value;
   const selectValue = document.querySelector(
@@ -18,8 +18,6 @@ const appendItem = () => {
     status: selectStatus,
     statusId: selectValue
   });
-  renderToDoList(appendTarget);
-  closeAddListItem();
 };
 
 const submitItem = () => {
@@ -28,7 +26,16 @@ const submitItem = () => {
   );
   addProjectForm.addEventListener("submit", e => {
     e.preventDefault();
-    appendItem();
+    if (
+      document
+        .querySelector(".c-projects__add-list-item")
+        .classList.contains("addItemActive")
+    ) {
+      closeAddListItem();
+      appendItem(e);
+      renderToDoList(appendTarget);
+    }
+
     addProjectForm.reset();
   });
 };

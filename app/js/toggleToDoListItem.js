@@ -10,6 +10,7 @@ document
   .addEventListener("click", () => {
     closeAddListItem();
   });
+
 const closeAddListItem = () => {
   document.querySelector(".addItemActive").classList.remove("addItemActive");
 };
