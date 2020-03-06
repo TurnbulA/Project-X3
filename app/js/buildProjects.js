@@ -88,17 +88,9 @@ const createObject = () => {
     title: projectName,
     colour: projectColour,
     description: projectDescription,
-    toDoList: [
-      {
-        title: "",
-        complete: false,
-        status: "",
-        statusId: ""
-      }
-    ]
+    toDoList: []
   });
   projects[projectId] = newProject();
   renderIcon();
   resetForm();
-  createList();
 };
