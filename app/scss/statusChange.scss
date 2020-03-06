@@ -1,0 +1,41 @@
+@import "utilities.scss";
+
+.c-list-item {
+  &__status {
+    &--container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
+}
+
+.c-status-change {
+  &__select {
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 1.5rem rgba(39, 39, 39, 0.5);
+    }
+    &.waiting {
+      color: $waitingText;
+      background-color: $waitingContainer;
+    }
+    &.in-review {
+      color: $inReview;
+      background-color: $inReviewText;
+    }
+    &.in-progress {
+      color: $inProgressText;
+      background-color: $inProgress;
+    }
+    &.approved {
+      color: $approvedText;
+      background-color: $approvedContainer;
+    }
+  }
+}

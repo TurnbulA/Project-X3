@@ -21,8 +21,8 @@ const renderToDoList = projectName => {
             <p class="c-list-item__text--title">${item.title}</p>
             
           </div>     
-        </label>  
-        <p class="c-list-item__text--status ${item.statusId}">${item.status}</p>
+        </label> 
+          <select class="c-status-change__select ${item.statusId}"></select>
       </li>
       `;
     })
@@ -32,13 +32,15 @@ const renderToDoList = projectName => {
   return projectToDos;
 };
 
+let projectTarget = "";
 const createList = () => {
   const projectIcons = [...document.querySelectorAll(".c-projects--icon")];
   projectIcons.forEach(projectIcon => {
     projectIcon.addEventListener("click", e => {
-      const projectTarget = e.target.getAttribute("data-id");
+      projectTarget = e.target.getAttribute("data-id");
       renderToDoList(projectTarget);
-      locateProject(projectTarget);
+      submitItem();
+      changeStatusDropDown();
     });
   });
 };
