@@ -5,7 +5,7 @@ const locateProject = projectName => {
   submitItem();
 };
 
-const appendItem = e => {
+const appendItem = () => {
   const inputValue = document.querySelector(".c-projects__add-list-item--input")
     .value;
   const selectValue = document.querySelector(
@@ -32,10 +32,9 @@ const submitItem = () => {
         .classList.contains("addItemActive")
     ) {
       closeAddListItem();
-      appendItem(e);
+      appendItem();
       renderToDoList(appendTarget);
     }
-
     addProjectForm.reset();
   });
 };
