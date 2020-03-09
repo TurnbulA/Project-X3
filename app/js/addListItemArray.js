@@ -1,18 +1,11 @@
-let appendTarget = "";
-
-const locateProject = projectName => {
-  appendTarget = projectName;
-  submitItem();
-};
-
-const appendItem = () => {
+const projectItem = () => {
   const inputValue = document.querySelector(".c-projects__add-list-item--input")
     .value;
   const selectValue = document.querySelector(
     ".c-projects__add-list-item--options"
   ).value;
   const selectStatus = selectValue.replace(/-/g, " ");
-  projects[appendTarget].toDoList.push({
+  projects[projectTarget].toDoList.push({
     title: inputValue,
     completed: false,
     status: selectStatus,
@@ -32,8 +25,8 @@ const submitItem = () => {
         .classList.contains("addItemActive")
     ) {
       closeAddListItem();
-      appendItem();
-      renderToDoList(appendTarget);
+      projectItem();
+      renderToDoList(projectTarget);
     }
     addProjectForm.reset();
   });
