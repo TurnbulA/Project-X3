@@ -45,6 +45,7 @@ const colourValidation = () => {
     }
   });
 };
+
 const resetForm = () => {
   document.querySelector(".c-add-project__form").reset();
   document

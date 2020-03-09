@@ -28,7 +28,8 @@ const renderToDoList = projectName => {
     })
     .join("");
   projectToDoList.innerHTML = projectToDos;
-
+  submitItem();
+  changeStatusDropDown();
   return projectToDos;
 };
 
@@ -38,9 +39,7 @@ const createList = () => {
   projectIcons.forEach(projectIcon => {
     projectIcon.addEventListener("click", e => {
       projectTarget = e.target.getAttribute("data-id");
-      renderToDoList(projectTarget);
       submitItem();
-      changeStatusDropDown();
     });
   });
 };

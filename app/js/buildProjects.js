@@ -69,6 +69,7 @@ const renderIcon = () => {
     })
     .join("");
   projectIconList.innerHTML = projectIcons;
+
   return projectIcons;
 };
 renderIcon();
@@ -92,5 +93,6 @@ const createObject = () => {
   });
   projects[projectId] = newProject();
   renderIcon();
+  openProject();
   resetForm();
 };

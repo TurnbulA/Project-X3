@@ -5,15 +5,18 @@ const openProject = () => {
       const projectIconBody = document.querySelector(
         ".c-container--project-body"
       );
+      projectTarget = e.target.getAttribute("data-id");
+      renderToDoList(projectTarget);
       const projectToDo = document.querySelector(".c-container--project-list");
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
+
       isIconActive();
     });
   });
 };
-
+openProject();
 const closeProject = () => {
   const projectIconBody = document.querySelector(".c-container--project-body");
   const projectToDo = document.querySelector(".c-container--project-list");
@@ -25,7 +28,6 @@ const closeProject = () => {
   });
   openProject();
 };
-openProject();
 
 document
   .querySelector(".c-projects-to-do__close--cross")
