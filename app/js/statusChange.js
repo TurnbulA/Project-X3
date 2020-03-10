@@ -20,19 +20,21 @@ const replaceStatus = function() {
   ];
   selectedOptions.forEach(selectedOption => {
     selectedOption.addEventListener("change", e => {
-      if (e.target.classList.contains("waiting")) {
-        e.target.classList.remove("waiting");
-        e.target.classList.add(e.target.value);
-      } else if (e.target.classList.contains("in-review")) {
-        e.target.classList.remove("in-review");
-        e.target.classList.add(e.target.value);
-      } else if (e.target.classList.contains("in-progress")) {
-        e.target.classList.remove("in-progress");
-        e.target.classList.add(e.target.value);
-      } else if (e.target.classList.contains("approved")) {
-        e.target.classList.remove("approved");
-        e.target.classList.add(e.target.value);
-      }
+      e.target.setAttribute("status-id", e.target.value);
+      const container = e.target.parentElement;
+      changeArray(e.target.value, container);
     });
   });
+};
+
+const changeArray = (newValue, container) => {
+  const parentId = container.getAttribute("list-id");
+  const selectStatus = newValue.replace(/-/g, " ");
+  let projectStatus = projects[projectTarget].toDoList.filter(item => {
+    console.log(item.statusId);
+    if (item.title === parentId) {
+      item.statusId = newValue;
+      item.status = selectStatus;
+    }
+  }).status;
 };

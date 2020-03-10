@@ -9,7 +9,7 @@ const renderToDoList = projectName => {
   const projectToDos = projects[projectName].toDoList
     .map(item => {
       return `
-      <li class="c-list-item" data-id="${projects[projectName].dataId}">
+      <li class="c-list-item" list-id="${item.title}">
         <label class="c-list-item__input">
           <input type="checkbox"/>
           <span class="c-list-item__input--custom">
@@ -18,11 +18,10 @@ const renderToDoList = projectName => {
             </svg>
           </span>
           <div class="c-list-item__text">              
-            <p class="c-list-item__text--title">${item.title}</p>
-            
+            <p class="c-list-item__text--title">${item.title}</p> 
           </div>     
         </label> 
-          <select class="c-status-change__select ${item.statusId}"></select>
+          <select class="c-status-change__select" status-id="${item.statusId}"></select>
       </li>
       `;
     })

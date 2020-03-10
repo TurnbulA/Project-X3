@@ -11,7 +11,6 @@ const openProject = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
-
       isIconActive();
     });
   });
