@@ -21,21 +21,22 @@
     &:hover {
       box-shadow: 0 0 1.5rem rgba(39, 39, 39, 0.5);
     }
-    &.waiting {
-      color: $waitingText;
-      background-color: $waitingContainer;
-    }
-    &.in-review {
-      color: $inReview;
-      background-color: $inReviewText;
-    }
-    &.in-progress {
-      color: $inProgressText;
-      background-color: $inProgress;
-    }
-    &.approved {
-      color: $approvedText;
-      background-color: $approvedContainer;
-    }
   }
+}
+
+[status-style="waiting"] {
+  color: $waitingText;
+  background-color: $waitingContainer;
+}
+[status-style="in-review"] {
+  color: $inReview;
+  background-color: $inReviewText;
+}
+[status-style="in-progress"] {
+  color: $inProgressText;
+  background-color: $inProgress;
+}
+[status-style="approved"] {
+  color: $approvedText;
+  background-color: $approvedContainer;
 }
