@@ -21,7 +21,7 @@ const renderToDoList = projectName => {
             <p class="c-list-item__text--title">${item.title}</p> 
           </div>     
         </label> 
-          <select class="c-status-change__select" status-id="${item.statusId}">
+          <select class="c-status-change__select " status-id="${item.title}" status-style="${item.statusId}">
           </select>
       </li>
       `;

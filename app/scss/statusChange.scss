@@ -24,19 +24,19 @@
   }
 }
 
-[status-id="waiting"] {
+[status-style="waiting"] {
   color: $waitingText;
   background-color: $waitingContainer;
 }
-[status-id="in-review"] {
+[status-style="in-review"] {
   color: $inReview;
   background-color: $inReviewText;
 }
-[status-id="in-progress"] {
+[status-style="in-progress"] {
   color: $inProgressText;
   background-color: $inProgress;
 }
-[status-id="approved"] {
+[status-style="approved"] {
   color: $approvedText;
   background-color: $approvedContainer;
 }
