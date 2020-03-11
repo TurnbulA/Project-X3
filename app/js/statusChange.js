@@ -70,3 +70,7 @@ const changeArray = (newValue, container) => {
     }
   }).status;
 };
+
+window.addEventListener("load", () => {
+  sessionStorage.clear();
+});
