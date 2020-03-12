@@ -95,4 +95,5 @@ const createObject = () => {
   renderIcon();
   openProject();
   resetForm();
+  foundResults();
 };

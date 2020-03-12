@@ -6,6 +6,7 @@
   background-color: $brightGray;
   display: flex;
   flex-direction: row;
+  margin: 2rem 0;
   border-radius: 1.5rem;
   padding-left: 2rem;
   cursor: pointer;
@@ -16,9 +17,11 @@
     width: 3rem;
     padding: 0;
     margin-right: 0.5rem;
+    cursor: pointer;
     &--svg {
       height: 2.5rem;
       width: 2.5rem;
+      stroke: $stormGray;
     }
   }
   &__input {
@@ -26,10 +29,28 @@
     border: none;
     height: 100%;
     width: 100%;
-    color: $stormGray;
+    color: $blackSqueeze;
     &::placeholder {
       color: $stormGray;
       font-size: 2rem;
+    }
+  }
+  &__container {
+    display: none;
+    &--text {
+      color: $blackSqueeze;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+    &--reset-button {
+      border: none;
+      color: #f64a4a;
+      background-color: transparent;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    &.show-container {
+      display: block;
     }
   }
 }

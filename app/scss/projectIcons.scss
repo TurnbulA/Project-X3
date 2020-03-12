@@ -13,6 +13,12 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      &.searched-for {
+        display: block;
+      }
+      &.not-searched {
+        display: none;
+      }
     }
   }
   &--icon {
