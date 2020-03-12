@@ -62,7 +62,7 @@
         <div class="c-header">
           <h1 class="c-header--title">Welcome Back</h1>
           <p class="c-header--para">We Have Missed You</p>
-          <div class="c-search-bar">
+          <form class="c-search-bar">
             <button type="submit" class="c-search-bar__button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,6 @@
                   <g
                     transform="translate(968 412)"
                     fill="none"
-                    stroke="#fcfefe"
                     stroke-width="1"
                   >
                     <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
@@ -86,7 +85,6 @@
                     y1="2.5"
                     transform="translate(975.5 419.5)"
                     fill="none"
-                    stroke="#fcfefe"
                     stroke-width="1"
                   />
                 </g>
@@ -97,6 +95,12 @@
               type="text"
               placeholder="Search Task or Project..."
             />
+          </form>
+          <div class="c-search-bar__container">
+            <p class="c-search-bar__container--text"></p>
+            <button class="c-search-bar__container--reset-button">
+              Reset Search
+            </button>
           </div>
         </div>
 
