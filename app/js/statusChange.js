@@ -47,7 +47,6 @@ const replaceStatus = function() {
   ];
   selectedOptions.forEach(selectedOption => {
     selectedOption.addEventListener("change", e => {
-      console.log(e.target);
       container = e.target.parentElement;
       sessionStorage.setItem(
         e.target.getAttribute("status-id"),

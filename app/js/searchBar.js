@@ -43,7 +43,6 @@ const searchFunction = () => {
   li.forEach(item => {
     const a = item.getElementsByTagName("h2")[0];
     const textValue = a.textContent;
-    console.log(item);
     if (textValue.toUpperCase().indexOf(filter) > -1) {
       item.classList.add("searched-for");
       foundResult = true;
