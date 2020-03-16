@@ -64,8 +64,6 @@
       }
       &.isActive {
         box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
-        border: 0.5rem solid $blue1;
-        border-radius: 3rem;
       }
     }
     &--purple {
@@ -75,9 +73,6 @@
       }
       &.isActive {
         box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
-        padding: 1rem;
-        border: 0.5rem solid $purple1;
-        border-radius: 3rem;
       }
     }
     &--orange {

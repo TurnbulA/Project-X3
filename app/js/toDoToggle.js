@@ -44,7 +44,6 @@ const closeProject = () => {
       if (document.querySelector(".activeList")) {
         document.querySelector(".activeList").classList.remove("activeList");
       }
-
       openProject();
     });
   });
@@ -53,5 +52,20 @@ const closeProject = () => {
 document
   .querySelector(".c-projects-to-do__close--cross")
   .addEventListener("click", () => {
-    closeProject();
+    if (document.querySelector(".borderActive")) {
+      document.querySelector(".borderActive").classList.remove("borderActive");
+    }
+    activeIcons = [...document.querySelectorAll(".iconActive")];
+    activeIcons.forEach(activeIcon => {
+      activeIcon.classList.remove("iconActive");
+    });
+    if (document.querySelector(".activeProject")) {
+      document
+        .querySelector(".activeProject")
+        .classList.remove("activeProject");
+    }
+    if (document.querySelector(".activeList")) {
+      document.querySelector(".activeList").classList.remove("activeList");
+    }
+    openProject();
   });
