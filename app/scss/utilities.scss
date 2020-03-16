@@ -3,35 +3,35 @@
 .u-gradient {
   &-border {
     &--pink {
-      &.borderActive {
+      &.c-projects__icon--border--active {
         padding: 1rem;
         border: 0.5rem solid $pink1;
         border-radius: 3rem;
       }
     }
     &--green {
-      &.borderActive {
+      &.c-projects__icon--border--active {
         padding: 1rem;
         border: 0.5rem solid $green1;
         border-radius: 3rem;
       }
     }
     &--blue {
-      &.borderActive {
+      &.c-projects__icon--border--active {
         padding: 1rem;
         border: 0.5rem solid $blue1;
         border-radius: 3rem;
       }
     }
     &--purple {
-      &.borderActive {
+      &.c-projects__icon--border--active {
         padding: 1rem;
         border: 0.5rem solid $purple1;
         border-radius: 3rem;
       }
     }
     &--orange {
-      &.borderActive {
+      &.c-projects__icon--border--active {
         padding: 1rem;
         border: 0.5rem solid $orange1;
         border-radius: 3rem;
