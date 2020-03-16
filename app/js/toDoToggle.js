@@ -11,6 +11,8 @@ const openProject = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
+      buttonClick = e.target;
+      addBorder(e.target);
       isIconActive();
     });
   });
@@ -32,13 +34,15 @@ document
   .querySelector(".c-projects-to-do__close--cross")
   .addEventListener("click", () => {
     closeProject();
+    removeBorder();
   });
 
 const isIconActive = () => {
   const activeProjects = [...document.querySelectorAll(".project-Icon")];
   activeProjects.forEach(activeProject => {
-    activeProject.addEventListener("click", () => {
+    activeProject.addEventListener("click", e => {
       if (activeProject.classList.contains("iconActive")) {
+        removeBorder(e.target);
         closeProject();
         const activeAddListItem = document.querySelector(
           ".c-projects__add-list-item"
@@ -48,5 +52,26 @@ const isIconActive = () => {
         }
       }
     });
+  });
+};
+
+const addBorder = buttonClick => {
+  const currentBorders = [...document.querySelectorAll(".c-projects--border")];
+  currentBorders.forEach(currentBorder => {
+    if (
+      buttonClick.getAttribute("data-id") ===
+      currentBorder.getAttribute("data-id")
+    ) {
+      currentBorder.classList.add("border-active");
+    }
+  });
+};
+
+const removeBorder = () => {
+  const currentBorders = [...document.querySelectorAll(".c-projects--border")];
+  currentBorders.forEach(currentBorder => {
+    if (currentBorder.classList.contains("border-active")) {
+      currentBorder.classList.remove("border-active");
+    }
   });
 };

@@ -3,7 +3,7 @@
 .c-container--project {
   &-body {
     position: absolute;
-    top: 5rem;
+    top: 10%;
     left: 40%;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,6 @@
     transition: all 300ms ease-in-out;
     &.activeProject {
       position: absolute;
-      top: 5rem;
       left: 0;
       transform: translateX(35%);
       display: flex;
