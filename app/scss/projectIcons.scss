@@ -33,16 +33,4 @@
   &--initals {
     color: $blackSqueeze;
   }
-  &--border {
-    width: 15rem;
-    height: 15rem;
-    position: relative;
-    display: none;
-    content: "";
-    margin-top: -3.5rem;
-    z-index: -1;
-    &.border-active {
-      display: block;
-    }
-  }
 }

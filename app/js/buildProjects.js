@@ -60,12 +60,12 @@ const renderIcon = () => {
   const projectIcons = Object.values(projects)
     .map(item => {
       const words = getTitleInitials(item.title);
-      return `<li class="c-projects__list--item project-Icon" data-id=${item.dataId}>
-        <div class="c-projects--border u-gradient-bg--${item.colour}--border" data-id=${item.dataId}></div>
-            <div class="c-projects--icon u-gradient-bg--${item.colour} project-Icon" data-id=${item.dataId}>
-              <h1 class="c-projects--initals" data-id=${item.dataId}>${words}</h1>
+      return `<li class="c-projects__list--item project-Icon " data-id=${item.dataId}>
+          <div class="c-projects--icon--border u-gradient-border--${item.colour}" data-id=${item.dataId}>
+              <div class="c-projects--icon u-gradient-bg--${item.colour} project-Icon" data-id=${item.dataId}>
+                <h1 class="c-projects--initals"  data-id=${item.dataId}>${words}</h1>
+              </div>
             </div>
-          
           <h2>${item.title}</h2>
         </li>`;
     })
