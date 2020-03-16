@@ -1,12 +1,12 @@
 const openProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
+  const projectButtons = [...document.querySelectorAll(".c-projects__icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
       const projectIconBody = document.querySelector(
         ".c-container--project-body"
       );
       projectTarget = e.target.getAttribute("data-id");
-      iconBorders = [...document.querySelectorAll(".c-projects--icon--border")];
+      iconBorders = [...document.querySelectorAll(".c-projects__icon--border")];
       iconBorders.forEach(iconBorder => {
         if (projectTarget === iconBorder.getAttribute("data-id")) {
           iconBorder.classList.add("borderActive");
@@ -24,7 +24,7 @@ const openProject = () => {
 openProject();
 
 const closeProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
+  const projectButtons = [...document.querySelectorAll(".c-projects__icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
       if (document.querySelector(".borderActive")) {
