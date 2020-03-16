@@ -67,10 +67,6 @@
         border: 0.5rem solid $blue1;
         border-radius: 3rem;
       }
-      &--border {
-        position: absolute;
-        padding: 1rem;
-      }
     }
     &--purple {
       background-image: linear-gradient(to top right, $purple1, $purple2);
@@ -83,9 +79,6 @@
         border: 0.5rem solid $purple1;
         border-radius: 3rem;
       }
-      &--border {
-        position: absolute;
-      }
     }
     &--orange {
       background-image: linear-gradient(to top right, $orange1, $orange2);
@@ -94,12 +87,6 @@
       }
       &.isActive {
         box-shadow: 0 0 2rem rgba(248, 190, 115, 1);
-      }
-      &--border {
-        position: absolute;
-        padding: 1rem;
-        border: 0.5rem solid $orange1;
-        border-radius: 3rem;
       }
     }
   }

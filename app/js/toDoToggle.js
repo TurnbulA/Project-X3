@@ -17,23 +17,37 @@ const openProject = () => {
       projectIconBody.classList.add("activeProject");
       projectToDo.classList.add("activeList");
       e.target.classList.add("iconActive");
-      isIconActive();
+      closeProject();
     });
   });
 };
 openProject();
 
 const closeProject = () => {
-  const projectIconBody = document.querySelector(".c-container--project-body");
-  const projectToDo = document.querySelector(".c-container--project-list");
-  const activeProjects = [...document.querySelectorAll(".iconActive")];
-  projectIconBody.classList.remove("activeProject");
-  projectToDo.classList.remove("activeList");
-  document.querySelector(".borderActive").classList.remove("borderActive");
-  activeProjects.forEach(activeProject => {
-    activeProject.classList.remove("iconActive");
+  const projectButtons = [...document.querySelectorAll(".c-projects--icon")];
+  projectButtons.forEach(projectButton => {
+    projectButton.addEventListener("click", e => {
+      if (document.querySelector(".borderActive")) {
+        document
+          .querySelector(".borderActive")
+          .classList.remove("borderActive");
+      }
+      activeIcons = [...document.querySelectorAll(".iconActive")];
+      activeIcons.forEach(activeIcon => {
+        activeIcon.classList.remove("iconActive");
+      });
+      if (document.querySelector(".activeProject")) {
+        document
+          .querySelector(".activeProject")
+          .classList.remove("activeProject");
+      }
+      if (document.querySelector(".activeList")) {
+        document.querySelector(".activeList").classList.remove("activeList");
+      }
+
+      openProject();
+    });
   });
-  openProject();
 };
 
 document
@@ -41,20 +55,3 @@ document
   .addEventListener("click", () => {
     closeProject();
   });
-
-const isIconActive = () => {
-  const activeProjects = [...document.querySelectorAll(".project-Icon")];
-  activeProjects.forEach(activeProject => {
-    activeProject.addEventListener("click", e => {
-      if (activeProject.classList.contains("iconActive")) {
-        closeProject();
-        const activeAddListItem = document.querySelector(
-          ".c-projects__add-list-item"
-        );
-        if (activeAddListItem.classList.contains("addItemActive")) {
-          closeAddListItem();
-        }
-      }
-    });
-  });
-};
