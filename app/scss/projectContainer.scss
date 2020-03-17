@@ -1,9 +1,9 @@
 @import "variables.scss";
 
-.c-container--project {
-  &-body {
+.c-project {
+  &__body {
     position: absolute;
-    top: 5rem;
+    top: 10%;
     left: 40%;
     display: flex;
     justify-content: space-between;
@@ -12,16 +12,15 @@
     width: 25%;
     margin: 10rem auto 0 auto;
     transition: all 300ms ease-in-out;
-    &.activeProject {
+    &--left-justify {
       position: absolute;
-      top: 5rem;
       left: 0;
       transform: translateX(35%);
       display: flex;
       justify-content: left;
     }
   }
-  &-list {
+  &__list {
     width: 50%;
     height: 100%;
     background-color: $blackSqueeze;
@@ -33,7 +32,7 @@
     transform: translateX(110%);
     transition: all 300ms ease-in-out;
     border-radius: 2rem;
-    &.activeList {
+    &--active {
       top: 1rem;
       right: 2rem;
       transform: translateX(0);

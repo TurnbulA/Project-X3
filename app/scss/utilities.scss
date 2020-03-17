@@ -1,49 +1,88 @@
 @import "variables.scss";
 
-.u-gradient-bg {
-  &--pink {
-    background-image: linear-gradient(to top right, $pink2, $pink1);
-    &:hover {
-      box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
+.u-gradient {
+  &-border {
+    &--pink {
+      &.c-icon__border--active {
+        padding: 1rem;
+        border: 0.5rem solid $pink1;
+        border-radius: 3rem;
+      }
     }
-    &.isActive {
-      box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
+    &--green {
+      &.c-icon__border--active {
+        padding: 1rem;
+        border: 0.5rem solid $green1;
+        border-radius: 3rem;
+      }
+    }
+    &--blue {
+      &.c-icon__border--active {
+        padding: 1rem;
+        border: 0.5rem solid $blue1;
+        border-radius: 3rem;
+      }
+    }
+    &--purple {
+      &.c-icon__border--active {
+        padding: 1rem;
+        border: 0.5rem solid $purple1;
+        border-radius: 3rem;
+      }
+    }
+    &--orange {
+      &.c-icon__border--active {
+        padding: 1rem;
+        border: 0.5rem solid $orange1;
+        border-radius: 3rem;
+      }
     }
   }
-  &--green {
-    background-image: linear-gradient(to top right, $green1, $green2);
-    &:hover {
-      box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
+  &-bg {
+    &--pink {
+      background-image: linear-gradient(to top right, $pink2, $pink1);
+      &:hover {
+        box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
+      }
+      &.isActive {
+        box-shadow: 0 0 2rem rgba(248, 59, 200, 1);
+      }
     }
-    &.isActive {
-      box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
+    &--green {
+      background-image: linear-gradient(to top right, $green1, $green2);
+      &:hover {
+        box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
+      }
+      &.isActive {
+        box-shadow: 0 0 2rem rgba(45, 214, 161, 1);
+      }
     }
-  }
-  &--blue {
-    background-image: linear-gradient(to top right, $blue1, $blue2);
-    &:hover {
-      box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
+    &--blue {
+      background-image: linear-gradient(to top right, $blue1, $blue2);
+      &:hover {
+        box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
+      }
+      &.isActive {
+        box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
+      }
     }
-    &.isActive {
-      box-shadow: 0 0 2rem rgba(113, 68, 224, 1);
+    &--purple {
+      background-image: linear-gradient(to top right, $purple1, $purple2);
+      &:hover {
+        box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
+      }
+      &.isActive {
+        box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
+      }
     }
-  }
-  &--purple {
-    background-image: linear-gradient(to top right, $purple1, $purple2);
-    &:hover {
-      box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
-    }
-    &.isActive {
-      box-shadow: 0 0 2rem rgba(190, 104, 213, 1);
-    }
-  }
-  &--orange {
-    background-image: linear-gradient(to top right, $orange1, $orange2);
-    &:hover {
-      box-shadow: 0 0 2rem rgba(248, 190, 115, 1);
-    }
-    &.isActive {
-      box-shadow: 0 0 2rem rgba(248, 190, 115, 1);
+    &--orange {
+      background-image: linear-gradient(to top right, $orange1, $orange2);
+      &:hover {
+        box-shadow: 0 0 2rem rgba(248, 190, 115, 1);
+      }
+      &.isActive {
+        box-shadow: 0 0 2rem rgba(248, 190, 115, 1);
+      }
     }
   }
 }
