@@ -7,7 +7,7 @@ document
   });
 
 document
-  .querySelector(".c-add-project__header--svg")
+  .querySelector(".c-add-project__header__svg")
   .addEventListener("click", () => {
     errorCheck();
     resetForm();

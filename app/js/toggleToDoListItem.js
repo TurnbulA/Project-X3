@@ -1,12 +1,12 @@
 document
-  .querySelector(".c-projects-to-do__list-item--svg")
+  .querySelector(".c-projects-to-do__list-item__svg")
   .addEventListener("click", () => {
     document
       .querySelector(".c-projects__add-list-item")
       .classList.toggle("addItemActive");
   });
 document
-  .querySelector(".c-projects__add-list-item--header--svg")
+  .querySelector(".c-projects__add-list-item--header__svg")
   .addEventListener("click", () => {
     closeAddListItem();
   });

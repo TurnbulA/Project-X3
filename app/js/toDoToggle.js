@@ -4,7 +4,7 @@ const openProject = () => {
     projectButton.addEventListener("click", e => {
       const projectIconBody = document.querySelector(".c-project__container");
       const projectIconList = document.querySelector(
-        ".c-project__container--list"
+        ".c-project__container__list"
       );
       projectTarget = e.target.getAttribute("data-id");
       iconBorders = [...document.querySelectorAll(".c-icon__border")];

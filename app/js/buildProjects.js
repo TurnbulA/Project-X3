@@ -77,7 +77,7 @@ const renderIcon = () => {
 renderIcon();
 
 const createObject = () => {
-  const projectName = document.querySelector(".c-add-project__input--title")
+  const projectName = document.querySelector(".c-add-project__input__title")
     .value;
   const projectColour = document
     .querySelector(".isActive")

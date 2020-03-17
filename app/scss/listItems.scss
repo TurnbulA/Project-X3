@@ -7,10 +7,10 @@
     &--close {
       cursor: pointer;
     }
-    &--text-content {
+    &__text-content {
       width: 100%;
     }
-    &--title {
+    &__title {
       color: $ebonyClay;
     }
     &--description {
@@ -27,7 +27,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    &--svg {
+    &__svg {
       cursor: pointer;
       &:hover {
         box-shadow: 0 0 1.5rem rgba(39, 39, 39, 0.5);

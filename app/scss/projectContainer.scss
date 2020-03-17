@@ -10,7 +10,7 @@
     &.c-content--left-justify {
       width: 50%;
     }
-    &--body {
+    &__body {
       width: 50rem;
       max-width: 50%;
       display: flex;
@@ -19,7 +19,7 @@
       align-items: center;
       transition: all 300ms ease-in-out;
     }
-    &--list {
+    &__list {
       width: 50%;
       min-height: 10rem;
       background-color: $blackSqueeze;

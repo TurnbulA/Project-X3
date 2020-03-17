@@ -38,12 +38,12 @@
     display: flex;
     flex-direction: row;
     text-align: left;
-    &--text {
+    &__text {
       color: $manatee;
       margin: 0;
       width: 100%;
     }
-    &--svg {
+    &__svg {
       fill: rgb(190, 2, 2);
       cursor: pointer;
       &:hover {
@@ -52,7 +52,7 @@
     }
   }
   &__input {
-    &--title {
+    &__title {
       width: 50%;
       height: 5rem;
       margin: 2rem 0 2rem 0;
@@ -84,7 +84,7 @@
     }
   }
   &__error {
-    &--title {
+    &__title {
       display: none;
       color: red;
       &.error {

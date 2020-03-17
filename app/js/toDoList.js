@@ -1,10 +1,10 @@
 const projectToDoHeader = document.querySelector(
-  ".c-projects-to-do__header--text-content"
+  ".c-projects-to-do__header__text-content"
 );
 const projectToDoList = document.querySelector(".c-projects-to-do__list");
 
 const renderToDoList = projectName => {
-  projectToDoHeader.innerHTML = `<h1 class="c-projects-to-do__header--title">${projects[projectName].title}</h1>
+  projectToDoHeader.innerHTML = `<h1 class="c-projects-to-do__header__title">${projects[projectName].title}</h1>
   <p class="c-projects-to-do__header--description">${projects[projectName].description}</p>`;
   const projectToDos = projects[projectName].toDoList
     .map(item => {
@@ -18,7 +18,7 @@ const renderToDoList = projectName => {
             </svg>
           </span>
           <div class="c-list-item__text">              
-            <p class="c-list-item__text--title">${item.title}</p> 
+            <p class="c-list-item__text__title">${item.title}</p> 
           </div>     
         </label> 
           <select class="c-status-change__select " status-id="${item.title}" status-style="${item.statusId}">

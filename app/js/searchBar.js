@@ -34,7 +34,7 @@ const searchInputReset = () => {
 };
 
 const searchFunction = () => {
-  const searchText = document.querySelector(".c-search-bar__container--text");
+  const searchText = document.querySelector(".c-search-bar__container__text");
   const input = document.querySelector(".c-search-bar__input");
   const filter = input.value.toUpperCase();
   const ul = document.querySelector(".c-projects__list");
@@ -60,7 +60,7 @@ const searchFunction = () => {
 
 const resetSearch = () => {
   const resetButton = document.querySelector(
-    ".c-search-bar__container--reset-button"
+    ".c-search-bar__container__reset-button"
   );
   resetButton.addEventListener("click", () => {
     searchInputReset();

@@ -18,10 +18,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      &--text {
+      &__text {
         color: $ebonyClay;
       }
-      &--svg {
+      &__svg {
         cursor: pointer;
         fill: red;
       }
