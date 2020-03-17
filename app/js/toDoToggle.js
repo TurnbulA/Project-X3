@@ -11,9 +11,9 @@ const openProject = () => {
         }
       });
       renderToDoList(projectTarget);
-      const projectToDo = document.querySelector(".c-project__list");
+      const projectToDo = document.querySelector(".c-project__container--list");
       projectIconBody.classList.add("c-project__container--left-justify");
-      projectToDo.classList.add("c-project__list--active");
+      projectToDo.classList.add("c-project__container--list--left-justify");
       e.target.classList.add("c-icon--active");
       closeProject();
     });
@@ -39,9 +39,11 @@ const closeProject = () => {
       if (justifiedBody) {
         justifiedBody.classList.remove("c-project__container--left-justify");
       }
-      const activeList = document.querySelector(".c-project__list--active");
+      const activeList = document.querySelector(
+        ".c-project__container--list--left-justify"
+      );
       if (activeList) {
-        activeList.classList.remove("c-project__list--active");
+        activeList.classList.remove("c-project__container--list--left-justify");
       }
       openProject();
     });
@@ -65,9 +67,11 @@ document
     if (leftJustify) {
       leftJustify.classList.remove("c-project__container--left-justify");
     }
-    const activeList = document.querySelector(".c-project__list--active");
+    const activeList = document.querySelector(
+      ".c-project__container--list--active"
+    );
     if (activeList) {
-      activeList.classList.remove("c-project__list--active");
+      activeList.classList.remove("c-project__container--list--active");
     }
     openProject();
   });
