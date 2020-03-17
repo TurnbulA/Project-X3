@@ -1,20 +1,20 @@
 const openProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects-icon")];
+  const projectButtons = [...document.querySelectorAll(".c-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
       const projectIconBody = document.querySelector(".c-project__body");
       projectTarget = e.target.getAttribute("data-id");
-      iconBorders = [...document.querySelectorAll(".c-projects-icon__border")];
+      iconBorders = [...document.querySelectorAll(".c-icon__border")];
       iconBorders.forEach(iconBorder => {
         if (projectTarget === iconBorder.getAttribute("data-id")) {
-          iconBorder.classList.add("c-projects-icon__border--active");
+          iconBorder.classList.add("c-icon__border--active");
         }
       });
       renderToDoList(projectTarget);
       const projectToDo = document.querySelector(".c-project__list");
       projectIconBody.classList.add("c-project__body--left-justify");
       projectToDo.classList.add("c-project__list--active");
-      e.target.classList.add("c-projects-icon__active");
+      e.target.classList.add("c-icon__active");
       closeProject();
     });
   });
@@ -22,27 +22,27 @@ const openProject = () => {
 openProject();
 
 const closeProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects-icon")];
+  const projectButtons = [...document.querySelectorAll(".c-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
-      if (document.querySelector(".c-projects-icon__border--active")) {
+      if (document.querySelector(".c-icon__border--active")) {
         document
-          .querySelector(".c-projects-icon__border--active")
-          .classList.remove("c-projects-icon__border--active");
+          .querySelector(".c-icon__border--active")
+          .classList.remove("c-icon__border--active");
       }
-      activeIcons = [...document.querySelectorAll(".c-projects-icon__active")];
+      activeIcons = [...document.querySelectorAll(".c-icon__active")];
       activeIcons.forEach(activeIcon => {
-        activeIcon.classList.remove("c-projects-icon__active");
+        activeIcon.classList.remove("c-icon__active");
       });
-      if (document.querySelector(".c-project__body--left-justify")) {
-        document
-          .querySelector(".c-project__body--left-justify")
-          .classList.remove("c-project__body--left-justify");
+      const justifiedBody = document.querySelector(
+        ".c-project__body--left-justify"
+      );
+      if (justifiedBody) {
+        justifiedBody.classList.remove("c-project__body--left-justify");
       }
-      if (document.querySelector(".c-project__list--active")) {
-        document
-          .querySelector(".c-project__list--active")
-          .classList.remove("c-project__list--active");
+      const activeList = document.querySelector(".c-project__list--active");
+      if (activeList) {
+        activeList.classList.remove("c-project__list--active");
       }
       openProject();
     });
@@ -52,24 +52,23 @@ const closeProject = () => {
 document
   .querySelector(".c-projects-to-do__close--cross")
   .addEventListener("click", () => {
-    if (document.querySelector(".c-projects-icon__border--active")) {
-      document
-        .querySelector(".c-projects-icon__border--active")
-        .classList.remove("c-projects-icon__border--active");
+    const activeBorder = document.querySelector(".c-icon__border--active");
+    if (activeBorder) {
+      activeBorder.classList.remove("c-icon__border--active");
     }
-    activeIcons = [...document.querySelectorAll(".c-projects-icon__active")];
+    activeIcons = [...document.querySelectorAll(".c-icon__active")];
     activeIcons.forEach(activeIcon => {
-      activeIcon.classList.remove("c-projects-icon__active");
+      activeIcon.classList.remove("c-icon__active");
     });
-    if (document.querySelector(".c-project__body--left-justify")) {
-      document
-        .querySelector(".c-project__body--left-justify")
-        .classList.remove("c-project__body--left-justify");
+    const leftJustify = document.querySelector(
+      ".c-project__body--left-justify"
+    );
+    if (leftJustify) {
+      leftJustify.classList.remove("c-project__body--left-justify");
     }
-    if (document.querySelector(".c-project__list--active")) {
-      document
-        .querySelector(".c-project__list--active")
-        .classList.remove("c-project__list--active");
+    const activeList = document.querySelector(".c-project__list--active");
+    if (activeList) {
+      activeList.classList.remove("c-project__list--active");
     }
     openProject();
   });
