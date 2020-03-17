@@ -14,7 +14,7 @@ const openProject = () => {
       const projectToDo = document.querySelector(".c-project__list");
       projectIconBody.classList.add("c-project__body--left-justify");
       projectToDo.classList.add("c-project__list--active");
-      e.target.classList.add("c-icon__active");
+      e.target.classList.add("c-icon--active");
       closeProject();
     });
   });
@@ -25,14 +25,13 @@ const closeProject = () => {
   const projectButtons = [...document.querySelectorAll(".c-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
-      if (document.querySelector(".c-icon__border--active")) {
-        document
-          .querySelector(".c-icon__border--active")
-          .classList.remove("c-icon__border--active");
+      const iconBorder = document.querySelector(".c-icon__border--active");
+      if (iconBorder) {
+        iconBorder.classList.remove("c-icon__border--active");
       }
-      activeIcons = [...document.querySelectorAll(".c-icon__active")];
+      activeIcons = [...document.querySelectorAll(".c-icon--active")];
       activeIcons.forEach(activeIcon => {
-        activeIcon.classList.remove("c-icon__active");
+        activeIcon.classList.remove("c-icon--active");
       });
       const justifiedBody = document.querySelector(
         ".c-project__body--left-justify"
@@ -56,9 +55,9 @@ document
     if (activeBorder) {
       activeBorder.classList.remove("c-icon__border--active");
     }
-    activeIcons = [...document.querySelectorAll(".c-icon__active")];
+    activeIcons = [...document.querySelectorAll(".c-icon--active")];
     activeIcons.forEach(activeIcon => {
-      activeIcon.classList.remove("c-icon__active");
+      activeIcon.classList.remove("c-icon--active");
     });
     const leftJustify = document.querySelector(
       ".c-project__body--left-justify"
