@@ -3,6 +3,9 @@ const openProject = () => {
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
       const projectIconBody = document.querySelector(".c-project__container");
+      const projectIconList = document.querySelector(
+        ".c-project__container--list"
+      );
       projectTarget = e.target.getAttribute("data-id");
       iconBorders = [...document.querySelectorAll(".c-icon__border")];
       iconBorders.forEach(iconBorder => {
@@ -11,9 +14,8 @@ const openProject = () => {
         }
       });
       renderToDoList(projectTarget);
-      const projectToDo = document.querySelector(".c-project__container--list");
-      projectIconBody.classList.add("c-project__container--left-justify");
-      projectToDo.classList.add("c-project__container--list--left-justify");
+      projectIconBody.classList.add("left-justify");
+      projectIconList.classList.add("left-justify");
       e.target.classList.add("c-icon--active");
       closeProject();
     });
@@ -34,17 +36,16 @@ const closeProject = () => {
         activeIcon.classList.remove("c-icon--active");
       });
       const justifiedBody = document.querySelector(
-        ".c-project__container--left-justify"
+        ".c-project__container--body"
       );
-      if (justifiedBody) {
-        justifiedBody.classList.remove("c-project__container--left-justify");
-      }
-      const activeList = document.querySelector(
-        ".c-project__container--list--left-justify"
-      );
-      if (activeList) {
-        activeList.classList.remove("c-project__container--list--left-justify");
-      }
+      const leftJustifiedItems = [
+        ...document.querySelectorAll(".left-justify")
+      ];
+      leftJustifiedItems.forEach(leftJustifiedItem => {
+        if (leftJustifiedItem) {
+          leftJustifiedItem.classList.remove("left-justify");
+        }
+      });
       openProject();
     });
   });
@@ -61,17 +62,13 @@ document
     activeIcons.forEach(activeIcon => {
       activeIcon.classList.remove("c-icon--active");
     });
-    const leftJustify = document.querySelector(
-      ".c-project__container--left-justify"
-    );
-    if (leftJustify) {
-      leftJustify.classList.remove("c-project__container--left-justify");
-    }
-    const activeList = document.querySelector(
-      ".c-project__container--list--active"
-    );
-    if (activeList) {
-      activeList.classList.remove("c-project__container--list--active");
-    }
+    const leftJustifiedItems = [...document.querySelectorAll(".left-justify")];
+    leftJustifiedItems.forEach(leftJustifiedItem => {
+      console.log("hi");
+      if (leftJustifiedItem) {
+        leftJustifiedItem.classList.remove("left-justify");
+      }
+    });
+
     openProject();
   });
