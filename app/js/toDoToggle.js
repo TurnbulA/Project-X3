@@ -14,8 +14,8 @@ const openProject = () => {
         }
       });
       renderToDoList(projectTarget);
-      projectIconBody.classList.add("left-justify");
-      projectIconList.classList.add("left-justify");
+      projectIconBody.classList.add("c-content--left-justify");
+      projectIconList.classList.add("c-content--left-justify");
       e.target.classList.add("c-icon--active");
       closeProject();
     });
@@ -35,15 +35,12 @@ const closeProject = () => {
       activeIcons.forEach(activeIcon => {
         activeIcon.classList.remove("c-icon--active");
       });
-      const justifiedBody = document.querySelector(
-        ".c-project__container--body"
-      );
       const leftJustifiedItems = [
-        ...document.querySelectorAll(".left-justify")
+        ...document.querySelectorAll(".c-content--left-justify")
       ];
       leftJustifiedItems.forEach(leftJustifiedItem => {
         if (leftJustifiedItem) {
-          leftJustifiedItem.classList.remove("left-justify");
+          leftJustifiedItem.classList.remove("c-content--left-justify");
         }
       });
       openProject();
@@ -62,11 +59,12 @@ document
     activeIcons.forEach(activeIcon => {
       activeIcon.classList.remove("c-icon--active");
     });
-    const leftJustifiedItems = [...document.querySelectorAll(".left-justify")];
+    const leftJustifiedItems = [
+      ...document.querySelectorAll(".c-content--left-justify")
+    ];
     leftJustifiedItems.forEach(leftJustifiedItem => {
-      console.log("hi");
       if (leftJustifiedItem) {
-        leftJustifiedItem.classList.remove("left-justify");
+        leftJustifiedItem.classList.remove("c-content--left-justify");
       }
     });
 
