@@ -1,7 +1,7 @@
 @import "variables.scss";
 
-.c-container__project {
-  &-body {
+.c-project {
+  &__body {
     position: absolute;
     top: 10%;
     left: 40%;
@@ -20,7 +20,7 @@
       justify-content: left;
     }
   }
-  &-list {
+  &__list {
     width: 50%;
     height: 100%;
     background-color: $blackSqueeze;

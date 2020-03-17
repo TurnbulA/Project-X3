@@ -1,22 +1,20 @@
 const openProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects__icon")];
+  const projectButtons = [...document.querySelectorAll(".c-projects-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
-      const projectIconBody = document.querySelector(
-        ".c-container__project-body"
-      );
+      const projectIconBody = document.querySelector(".c-project__body");
       projectTarget = e.target.getAttribute("data-id");
-      iconBorders = [...document.querySelectorAll(".c-projects__icon--border")];
+      iconBorders = [...document.querySelectorAll(".c-projects-icon__border")];
       iconBorders.forEach(iconBorder => {
         if (projectTarget === iconBorder.getAttribute("data-id")) {
-          iconBorder.classList.add("c-projects__icon--border--active");
+          iconBorder.classList.add("c-projects-icon__border--active");
         }
       });
       renderToDoList(projectTarget);
-      const projectToDo = document.querySelector(".c-container__project-list");
-      projectIconBody.classList.add("c-container__project-body--left-justify");
-      projectToDo.classList.add("c-container__project-list--active");
-      e.target.classList.add("c-projects__icon--active");
+      const projectToDo = document.querySelector(".c-project__list");
+      projectIconBody.classList.add("c-project__body--left-justify");
+      projectToDo.classList.add("c-project__list--active");
+      e.target.classList.add("c-projects-icon__active");
       closeProject();
     });
   });
@@ -24,27 +22,27 @@ const openProject = () => {
 openProject();
 
 const closeProject = () => {
-  const projectButtons = [...document.querySelectorAll(".c-projects__icon")];
+  const projectButtons = [...document.querySelectorAll(".c-projects-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
-      if (document.querySelector(".c-projects__icon--border--active")) {
+      if (document.querySelector(".c-projects-icon__border--active")) {
         document
-          .querySelector(".c-projects__icon--border--active")
-          .classList.remove("c-projects__icon--border--active");
+          .querySelector(".c-projects-icon__border--active")
+          .classList.remove("c-projects-icon__border--active");
       }
-      activeIcons = [...document.querySelectorAll(".c-projects__icon--active")];
+      activeIcons = [...document.querySelectorAll(".c-projects-icon__active")];
       activeIcons.forEach(activeIcon => {
-        activeIcon.classList.remove("c-projects__icon--active");
+        activeIcon.classList.remove("c-projects-icon__active");
       });
-      if (document.querySelector(".c-container__project-body--left-justify")) {
+      if (document.querySelector(".c-project__body--left-justify")) {
         document
-          .querySelector(".c-container__project-body--left-justify")
-          .classList.remove("c-container__project-body--left-justify");
+          .querySelector(".c-project__body--left-justify")
+          .classList.remove("c-project__body--left-justify");
       }
-      if (document.querySelector(".c-container__project-list--active")) {
+      if (document.querySelector(".c-project__list--active")) {
         document
-          .querySelector(".c-container__project-list--active")
-          .classList.remove("c-container__project-list--active");
+          .querySelector(".c-project__list--active")
+          .classList.remove("c-project__list--active");
       }
       openProject();
     });
@@ -54,24 +52,24 @@ const closeProject = () => {
 document
   .querySelector(".c-projects-to-do__close--cross")
   .addEventListener("click", () => {
-    if (document.querySelector(".c-projects__icon--border--active")) {
+    if (document.querySelector(".c-projects-icon__border--active")) {
       document
-        .querySelector(".c-projects__icon--border--active")
-        .classList.remove("c-projects__icon--border--active");
+        .querySelector(".c-projects-icon__border--active")
+        .classList.remove("c-projects-icon__border--active");
     }
-    activeIcons = [...document.querySelectorAll(".c-projects__icon--active")];
+    activeIcons = [...document.querySelectorAll(".c-projects-icon__active")];
     activeIcons.forEach(activeIcon => {
-      activeIcon.classList.remove("c-projects__icon--active");
+      activeIcon.classList.remove("c-projects-icon__active");
     });
-    if (document.querySelector(".c-container__project-body--left-justify")) {
+    if (document.querySelector(".c-project__body--left-justify")) {
       document
-        .querySelector(".c-container__project-body--left-justify")
-        .classList.remove("c-container__project-body--left-justify");
+        .querySelector(".c-project__body--left-justify")
+        .classList.remove("c-project__body--left-justify");
     }
-    if (document.querySelector(".c-container__project-list--active")) {
+    if (document.querySelector(".c-project__list--active")) {
       document
-        .querySelector(".c-container__project-list--active")
-        .classList.remove("c-container__project-list--active");
+        .querySelector(".c-project__list--active")
+        .classList.remove("c-project__list--active");
     }
     openProject();
   });

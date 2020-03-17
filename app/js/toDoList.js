@@ -35,7 +35,7 @@ const renderToDoList = projectName => {
 
 let projectTarget = "";
 const createList = () => {
-  const projectIcons = [...document.querySelectorAll(".c-projects__icon")];
+  const projectIcons = [...document.querySelectorAll(".c-projects-icon")];
   projectIcons.forEach(projectIcon => {
     projectIcon.addEventListener("click", e => {
       projectTarget = e.target.getAttribute("data-id");
