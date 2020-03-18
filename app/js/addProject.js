@@ -38,6 +38,6 @@ const resetForm = () => {
   document.querySelector(".c-add-project__form").reset();
   document
     .querySelector(".c-add-project__container")
-    .classList.remove("c-add-project__active");
+    .classList.remove("c-add-project--active");
   removeActiveColour();
 };

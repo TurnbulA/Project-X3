@@ -57,7 +57,7 @@ const searchFunction = () => {
 };
 
 const resetSearch = () => {
-  const resetButton = document.querySelector(".c-search-bar__reset-button");
+  const resetButton = document.querySelector(".c-reset-button");
   resetButton.addEventListener("click", () => {
     searchInputReset();
     const searchTextContainer = document.querySelector(
