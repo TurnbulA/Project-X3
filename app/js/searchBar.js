@@ -21,9 +21,7 @@ const foundResults = () => {
 };
 
 const searchInputReset = () => {
-  const projectListItems = [
-    ...document.querySelectorAll(".c-projects__list--item")
-  ];
+  const projectListItems = [...document.querySelectorAll(".c-projects__item")];
   projectListItems.forEach(projectListItem => {
     if (projectListItem.classList.contains("not-searched")) {
       projectListItem.classList.remove("not-searched");
@@ -34,7 +32,7 @@ const searchInputReset = () => {
 };
 
 const searchFunction = () => {
-  const searchText = document.querySelector(".c-search-bar__container--text");
+  const searchText = document.querySelector(".c-search-bar__text");
   const input = document.querySelector(".c-search-bar__input");
   const filter = input.value.toUpperCase();
   const ul = document.querySelector(".c-projects__list");
@@ -59,9 +57,7 @@ const searchFunction = () => {
 };
 
 const resetSearch = () => {
-  const resetButton = document.querySelector(
-    ".c-search-bar__container--reset-button"
-  );
+  const resetButton = document.querySelector(".c-search-bar__reset-button");
   resetButton.addEventListener("click", () => {
     searchInputReset();
     const searchTextContainer = document.querySelector(

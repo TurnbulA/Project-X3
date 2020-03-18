@@ -25,9 +25,9 @@
     display: none;
     transition: all 200ms ease-in-out;
     border-radius: 2rem;
-    &--active {
-      display: block;
-    }
+  }
+  &__active {
+    display: block;
   }
   &__form {
     display: flex;
@@ -52,22 +52,12 @@
     }
   }
   &__input {
-    &--title {
-      width: 50%;
-      height: 5rem;
-      margin: 2rem 0 2rem 0;
-      padding-left: 1rem;
-      border-radius: 1rem;
-      border: 0.1rem solid $brightGray;
-    }
-    &--description {
-      width: 50%;
-      height: 5rem;
-      margin: 2rem 0 4rem 0;
-      padding-left: 1rem;
-      border-radius: 1rem;
-      border: 0.1rem solid $brightGray;
-    }
+    width: 50%;
+    height: 5rem;
+    margin: 2rem 0 2rem 0;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid $brightGray;
   }
   &__submit {
     padding: 1rem;

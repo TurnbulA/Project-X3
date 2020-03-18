@@ -35,20 +35,21 @@
       font-size: 2rem;
     }
   }
+  &__text {
+    color: $blackSqueeze;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &__reset-button {
+    border: none;
+    color: #f64a4a;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+  }
   &__container {
     display: none;
-    &--text {
-      color: $blackSqueeze;
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-    }
-    &--reset-button {
-      border: none;
-      color: #f64a4a;
-      background-color: transparent;
-      font-size: 2rem;
-      cursor: pointer;
-    }
+
     &.show-container {
       display: block;
     }
