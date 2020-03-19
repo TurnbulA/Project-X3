@@ -60,8 +60,8 @@
     <div class="c-container">
       <div class="c-project__body">
         <div class="c-header">
-          <h1 class="c-header--title">Welcome Back</h1>
-          <p class="c-header--para">We Have Missed You</p>
+          <h1 class="c-header__title">Welcome Back</h1>
+          <p class="c-header__para">We Have Missed You</p>
           <form class="c-search-bar">
             <button type="submit" class="c-search-bar__button">
               <svg
@@ -97,8 +97,8 @@
             />
           </form>
           <div class="c-search-bar__container">
-            <p class="c-search-bar__container--text"></p>
-            <button class="c-search-bar__container--reset-button">
+            <p class="c-search-bar__text"></p>
+            <button class="c-reset-button">
               Reset Search
             </button>
           </div>
@@ -224,12 +224,11 @@
         <div class="c-add-project__body">
           <form class="c-add-project__form">
             <input
-              class="c-add-project__input--title"
+              class="c-add-project__input c-add-project__title"
               type="text"
               placeholder="Enter project name here"
               required
             />
-            <p class="c-add-project__error--title">Enter a project title</p>
             <h1 class="c-add-project__header--text">Select a colour</h1>
             <div class="c-colours" required>
               <div
@@ -253,10 +252,9 @@
                 data-colour="orange"
               ></div>
             </div>
-            <p class="c-add-project__error--colours">Select a colour</p>
             <h1 class="c-add-project__header--text">Project description</h1>
             <input
-              class="c-add-project__input--description"
+              class="c-add-project__input c-add-project__description"
               type="text"
               placeholder="Enter project description here"
               required
