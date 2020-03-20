@@ -2,7 +2,7 @@ const openProject = () => {
   const projectButtons = [...document.querySelectorAll(".c-icon")];
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener("click", e => {
-      const projectIconBody = document.querySelector(".c-project__body");
+      const projectIconBody = document.querySelector(".c-project__container");
       projectTarget = e.target.getAttribute("data-id");
       iconBorders = [...document.querySelectorAll(".c-icon__border")];
       iconBorders.forEach(iconBorder => {
@@ -12,7 +12,7 @@ const openProject = () => {
       });
       renderToDoList(projectTarget);
       const projectToDo = document.querySelector(".c-project__list");
-      projectIconBody.classList.add("c-project__body--left-justify");
+      projectIconBody.classList.add("c-project__container--left-justify");
       projectToDo.classList.add("c-project__list--active");
       e.target.classList.add("c-icon--active");
       closeProject();
@@ -34,10 +34,10 @@ const closeProject = () => {
         activeIcon.classList.remove("c-icon--active");
       });
       const justifiedBody = document.querySelector(
-        ".c-project__body--left-justify"
+        ".c-project__container--left-justify"
       );
       if (justifiedBody) {
-        justifiedBody.classList.remove("c-project__body--left-justify");
+        justifiedBody.classList.remove("c-project__container--left-justify");
       }
       const activeList = document.querySelector(".c-project__list--active");
       if (activeList) {
@@ -60,10 +60,10 @@ document
       activeIcon.classList.remove("c-icon--active");
     });
     const leftJustify = document.querySelector(
-      ".c-project__body--left-justify"
+      ".c-project__container--left-justify"
     );
     if (leftJustify) {
-      leftJustify.classList.remove("c-project__body--left-justify");
+      leftJustify.classList.remove("c-project__container--left-justify");
     }
     const activeList = document.querySelector(".c-project__list--active");
     if (activeList) {

@@ -58,94 +58,97 @@
     </div>
 
     <div class="c-container">
-      <div class="c-project__body">
-        <div class="c-header">
-          <h1 class="c-header__title">Welcome Back</h1>
-          <p class="c-header__para">We Have Missed You</p>
-          <form class="c-search-bar">
-            <button type="submit" class="c-search-bar__button">
+      <div class="c-project__container">
+        <div class="c-project__body">
+          <div class="c-header">
+            <h1 class="c-header__title">Welcome Back</h1>
+            <p class="c-header__para">We Have Missed You</p>
+            <form class="c-search-bar">
+              <button type="submit" class="c-search-bar__button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9.89"
+                  height="10.312"
+                  viewBox="0 0 9.89 10.312"
+                  class="c-search-bar__button--svg"
+                >
+                  <g transform="translate(-968 -412)">
+                    <g
+                      transform="translate(968 412)"
+                      fill="none"
+                      stroke-width="1"
+                    >
+                      <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
+                      <circle cx="4.5" cy="4.5" r="4" fill="none" />
+                    </g>
+                    <line
+                      x1="2"
+                      y1="2.5"
+                      transform="translate(975.5 419.5)"
+                      fill="none"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <input
+                class="c-search-bar__input"
+                type="text"
+                placeholder="Search Task or Project..."
+              />
+            </form>
+            <div class="c-search-bar__container">
+              <p class="c-search-bar__text"></p>
+              <button class="c-reset-button">
+                Reset Search
+              </button>
+            </div>
+          </div>
+
+          <div class="c-projects">
+            <h1>Projects</h1>
+            <ul class="c-projects__list"></ul>
+          </div>
+
+          <div class="c-add-project">
+            <div class="c-add-project__button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="9.89"
-                height="10.312"
-                viewBox="0 0 9.89 10.312"
-                class="c-search-bar__button--svg"
+                width="43"
+                height="44"
+                viewBox="0 0 43 44"
               >
-                <g transform="translate(-968 -412)">
-                  <g
-                    transform="translate(968 412)"
-                    fill="none"
-                    stroke-width="1"
-                  >
-                    <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
-                    <circle cx="4.5" cy="4.5" r="4" fill="none" />
-                  </g>
-                  <line
-                    x1="2"
-                    y1="2.5"
-                    transform="translate(975.5 419.5)"
-                    fill="none"
-                    stroke-width="1"
+                <g transform="translate(-1714 -820)">
+                  <rect
+                    width="43"
+                    height="44"
+                    rx="14"
+                    transform="translate(1714 820)"
+                    fill="#9769c7"
                   />
+                  <g transform="translate(-70 -6.5)">
+                    <line
+                      x2="11"
+                      transform="translate(1800 849)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                    />
+                    <line
+                      y2="11"
+                      transform="translate(1805.5 843.5)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                    />
+                  </g>
                 </g>
               </svg>
-            </button>
-            <input
-              class="c-search-bar__input"
-              type="text"
-              placeholder="Search Task or Project..."
-            />
-          </form>
-          <div class="c-search-bar__container">
-            <p class="c-search-bar__text"></p>
-            <button class="c-reset-button">
-              Reset Search
-            </button>
-          </div>
-        </div>
-
-        <div class="c-projects">
-          <h1>Projects</h1>
-          <ul class="c-projects__list"></ul>
-        </div>
-
-        <div class="c-add-project">
-          <div class="c-add-project__button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="43"
-              height="44"
-              viewBox="0 0 43 44"
-            >
-              <g transform="translate(-1714 -820)">
-                <rect
-                  width="43"
-                  height="44"
-                  rx="14"
-                  transform="translate(1714 820)"
-                  fill="#9769c7"
-                />
-                <g transform="translate(-70 -6.5)">
-                  <line
-                    x2="11"
-                    transform="translate(1800 849)"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-width="1.5"
-                  />
-                  <line
-                    y2="11"
-                    transform="translate(1805.5 843.5)"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-width="1.5"
-                  />
-                </g>
-              </g>
-            </svg>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="c-project__list">
         <div class="c-projects-to-do">
           <div class="c-projects-to-do__header">
