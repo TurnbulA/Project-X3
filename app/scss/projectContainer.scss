@@ -1,24 +1,21 @@
 @import "variables.scss";
 
 .c-project {
+  &__container {
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    &--left-justify {
+      width: 50%;
+    }
+  }
   &__body {
-    position: absolute;
-    top: 10%;
-    left: 40%;
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 25%;
+    width: 50rem;
     margin: 10rem auto 0 auto;
-    transition: all 300ms ease-in-out;
-    &--left-justify {
-      position: absolute;
-      left: 0;
-      transform: translateX(35%);
-      display: flex;
-      justify-content: left;
-    }
   }
   &__list {
     width: 50%;
