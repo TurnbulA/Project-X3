@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   &__list {
     width: 50%;
     min-height: 50rem;
@@ -41,5 +42,16 @@
       right: 2rem;
       transform: translateX(0);
     }
+  }
+}
+
+.c-projects {
+  &__icon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    color: $manatee;
   }
 }
