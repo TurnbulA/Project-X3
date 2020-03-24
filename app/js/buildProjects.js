@@ -60,7 +60,7 @@ const renderIcon = () => {
   const projectIcons = Object.values(projects)
     .map(({ colour, dataId, title }) => {
       const words = getTitleInitials(title);
-      return `<li class="c-projects__item " data-id=${dataId}>
+      return `<li class="c-projects__item" data-id=${dataId}>
           <div class="c-icon__border u-gradient-border--${colour}" data-id=${dataId}>
               <div class="c-icon u-gradient-bg--${colour} " data-id=${dataId}>
                 <h1 class="c-projects--initals"  data-id=${dataId}>${words}</h1>

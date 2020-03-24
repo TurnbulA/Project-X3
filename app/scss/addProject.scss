@@ -6,6 +6,7 @@
   justify-content: flex-end;
 
   &__button {
+    overflow: hidden;
     background-color: none;
     border-radius: 1.5rem;
     height: 4.4rem;
@@ -14,21 +15,29 @@
       box-shadow: 0 0 1.5rem rgba(252, 254, 254, 0.5);
     }
   }
-  &__container {
-    position: relative;
-    background-color: $blackSqueeze;
-    margin: -60rem auto;
-    width: 94.35rem;
-    max-width: 94.35rem;
-    z-index: 3;
-    padding: 3rem;
+  &__wrapper {
+    position: absolute;
+    margin-top: 10rem;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     display: none;
-    transition: all 200ms ease-in-out;
-    border-radius: 2rem;
   }
   &--active {
     display: block;
   }
+  &__container {
+    position: relative;
+    background-color: $blackSqueeze;
+    margin: 0 auto;
+    width: 94.35rem;
+    max-width: 94.35rem;
+    padding: 3rem;
+    transition: all 200ms ease-in-out;
+    border-radius: 2rem;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
