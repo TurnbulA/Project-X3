@@ -2,21 +2,28 @@
 
 .c-project {
   &__container {
+    padding: 0 50rem;
+    display: flex;
+    justify-content: center;
     width: 100%;
     transition: all 300ms ease-in-out;
     &--left-justify {
-      width: 50%;
+      padding: 0 1rem;
+      margin: 0 10rem;
+      display: flex;
+      justify-content: center;
+      width: 35%;
     }
   }
   &__body {
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 50rem;
-    margin: 10rem auto 0 auto;
   }
+
   &__list {
     width: 50%;
     min-height: 50rem;
@@ -35,5 +42,15 @@
       right: 2rem;
       transform: translateX(0);
     }
+  }
+}
+.c-projects {
+  &__icon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    color: $manatee;
   }
 }
